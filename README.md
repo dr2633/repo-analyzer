@@ -17,6 +17,11 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
+python -c "from src.repo_analyzer.utils import update_repository_structure; import os; update_repository_structure(os.getcwd())"
+```
+
+
+```python
 from repo_analyzer import analyze_repository
 
 repo_url = "https://github.com/username/repo"

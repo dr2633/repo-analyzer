@@ -1,0 +1,9 @@
+github-repo-analyzer/
+.gitignore
+README.md
+requirements.txt
+setup.py
+repository_structure.txt
+src/
+
+Last updated: 2024-10-09 14:52:50

@@ -3,6 +3,7 @@ github-repo-analyzer/
 ├── README.md
 ├── requirements.txt
 ├── setup.py
+├── repository_structure.txt
 ├── src/
 │   └── repo_analyzer/
 │       ├── __init__.py
