@@ -1,0 +1,212 @@
+{
+  "info": {
+    "name": "ai-by-hand-excel",
+    "full_name": "ImagineAILab/ai-by-hand-excel",
+    "description": null,
+    "stars": 1105,
+    "forks": 139,
+    "watchers": 1105,
+    "language": null,
+    "created_at": "2024-09-15 13:21:00+00:00",
+    "updated_at": "2024-10-09 23:25:32+00:00",
+    "default_branch": "main",
+    "open_issues": 0,
+    "license": "MIT License"
+  },
+  "structure": [
+    {
+      "type": "file",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "advanced",
+      "path": "advanced",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Autoencoder.xlsx",
+          "path": "advanced/Autoencoder.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Backpropgation.xlsx",
+          "path": "advanced/Backpropgation.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "LSTM.xlsx",
+          "path": "advanced/LSTM.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Mamba.xlsx",
+          "path": "advanced/Mamba.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Multi-Layer Perceptron.xlsx",
+          "path": "advanced/Multi-Layer Perceptron.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "RNN.xlsx",
+          "path": "advanced/RNN.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "ResNet.xlsx",
+          "path": "advanced/ResNet.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Self-Attention.xlsx",
+          "path": "advanced/Self-Attention.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Transformer.xlsx",
+          "path": "advanced/Transformer.xlsx",
+          "extension": ".xlsx"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "advanced/Autoencoder.xlsx",
+      "path": "advanced/Autoencoder.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/Backpropgation.xlsx",
+      "path": "advanced/Backpropgation.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/LSTM.xlsx",
+      "path": "advanced/LSTM.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/Mamba.xlsx",
+      "path": "advanced/Mamba.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/Multi-Layer Perceptron.xlsx",
+      "path": "advanced/Multi-Layer Perceptron.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/RNN.xlsx",
+      "path": "advanced/RNN.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/ResNet.xlsx",
+      "path": "advanced/ResNet.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/Self-Attention.xlsx",
+      "path": "advanced/Self-Attention.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "advanced/Transformer.xlsx",
+      "path": "advanced/Transformer.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "directory",
+      "name": "basic",
+      "path": "basic",
+      "contents": [
+        {
+          "type": "file",
+          "name": "LeakyReLU.xlsx",
+          "path": "basic/LeakyReLU.xlsx",
+          "extension": ".xlsx"
+        },
+        {
+          "type": "file",
+          "name": "Softmax.xlsx",
+          "path": "basic/Softmax.xlsx",
+          "extension": ".xlsx"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "basic/LeakyReLU.xlsx",
+      "path": "basic/LeakyReLU.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "basic/Softmax.xlsx",
+      "path": "basic/Softmax.xlsx",
+      "extension": ".xlsx"
+    },
+    {
+      "type": "file",
+      "name": "gallery.png",
+      "path": "gallery.png",
+      "extension": ".png"
+    },
+    {
+      "type": "directory",
+      "name": "workbook",
+      "path": "workbook",
+      "contents": [
+        {
+          "type": "file",
+          "name": "W1_Dot-Product.xlsx",
+          "path": "workbook/W1_Dot-Product.xlsx",
+          "extension": ".xlsx"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "workbook/W1_Dot-Product.xlsx",
+      "path": "workbook/W1_Dot-Product.xlsx",
+      "extension": ".xlsx"
+    }
+  ],
+  "summary": {
+    "file_count": 27,
+    "directory_count": 3,
+    "max_depth": 1,
+    "file_types": {
+      "no_extension": 1,
+      ".md": 1,
+      ".xlsx": 24,
+      ".png": 1
+    }
+  }
+}

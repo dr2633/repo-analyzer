@@ -3,14 +3,16 @@ import json
 from github import Github, GithubException
 from urllib.parse import urlparse
 from datetime import datetime
+from transformers import pipeline
 
 
 class GitHubAPI:
     def __init__(self, token=None):
         self.token = token or os.getenv('GITHUB_TOKEN')
         if not self.token:
-            raise ValueError(
-                "GitHub token is required. Set GITHUB_TOKEN environment variable or pass it to the constructor.")
+            self.token = input("GitHub token not found in environment. Please enter your GitHub token: ").strip()
+        if not self.token:
+            raise ValueError("GitHub token is required to proceed.")
         self.github = Github(self.token)
 
     def get_repo_structure(self, repo_url):
@@ -91,25 +93,6 @@ def format_structure(structure):
     return formatted
 
 
-def analyze_repository(repo_url):
-    api = GitHubAPI()
-    structure = api.get_repo_structure(repo_url)
-    info = api.get_repo_info(repo_url)
-
-    analysis = {
-        'info': info,
-        'structure': format_structure(structure),
-        'summary': {
-            'file_count': count_files(structure),
-            'directory_count': count_directories(structure),
-            'max_depth': calculate_max_depth(structure),
-            'file_types': count_file_types(structure),
-        }
-    }
-
-    return analysis
-
-
 def count_files(structure, count=0):
     for item in structure:
         if item['type'] == 'file':
@@ -151,6 +134,50 @@ def count_file_types(structure):
     return file_types
 
 
+class NLExplanationGenerator:
+    def __init__(self, model_name="gpt2"):
+        self.generator = pipeline("text-generation", model=model_name)
+
+    def generate_explanation(self, analysis_result):
+        summary = f"""
+Repository Name: {analysis_result['info']['name']}
+Description: {analysis_result['info']['description']}
+Stars: {analysis_result['info']['stars']}
+Forks: {analysis_result['info']['forks']}
+File Count: {analysis_result['summary']['file_count']}
+Directory Count: {analysis_result['summary']['directory_count']}
+Max Depth: {analysis_result['summary']['max_depth']}
+File Types: {', '.join([f'{k}: {v}' for k, v in analysis_result['summary']['file_types'].items()])}
+        """
+
+        prompt = f"Explain the following GitHub repository structure:\n\n{summary}\n\nExplanation:"
+
+        generated_text = self.generator(prompt, max_length=500, num_return_sequences=1)[0]['generated_text']
+
+        explanation = generated_text.split("Explanation:")[1].strip()
+
+        return explanation
+
+
+def analyze_repository(repo_url):
+    api = GitHubAPI()
+    structure = api.get_repo_structure(repo_url)
+    info = api.get_repo_info(repo_url)
+
+    analysis = {
+        'info': info,
+        'structure': format_structure(structure),
+        'summary': {
+            'file_count': count_files(structure),
+            'directory_count': count_directories(structure),
+            'max_depth': calculate_max_depth(structure),
+            'file_types': count_file_types(structure),
+        }
+    }
+
+    return analysis
+
+
 def print_analysis(analysis):
     print("\nRepository Analysis:")
     print(f"Repository Name: {analysis['info']['name']}")
@@ -166,22 +193,38 @@ def print_analysis(analysis):
 
 
 def main(repo_url):
-    analysis_result = analyze_repository(repo_url)
-    print_analysis(analysis_result)
+    try:
+        analysis_result = analyze_repository(repo_url)
+        print_analysis(analysis_result)
 
-    # Convert to JSON for easy input to LLM
-    json_output = json.dumps(analysis_result, indent=2, default=str)
+        nl_generator = NLExplanationGenerator()
+        explanation = nl_generator.generate_explanation(analysis_result)
 
-    # Save JSON to file
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"repo_analysis_{timestamp}.json"
-    with open(filename, 'w') as f:
-        f.write(json_output)
-    print(f"\nFull analysis saved to {filename}")
+        output_dir = 'outputs'
+        os.makedirs(output_dir, exist_ok=True)
 
-    # Print a truncated version of the JSON output
-    print("\nTruncated JSON Output (first 1000 characters):")
-    print(json_output[:1000] + "... (truncated)")
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        json_filename = f"repo_analysis_{timestamp}.json"
+        json_filepath = os.path.join(output_dir, json_filename)
+
+        with open(json_filepath, 'w') as f:
+            json.dump(analysis_result, f, indent=2)
+        print(f"\nFull analysis saved to {json_filepath}")
+
+        nl_filename = f"repo_explanation_{timestamp}.txt"
+        nl_filepath = os.path.join(output_dir, nl_filename)
+
+        with open(nl_filepath, 'w') as f:
+            f.write(explanation)
+        print(f"\nNatural language explanation saved to {nl_filepath}")
+
+        print("\nNatural Language Explanation:")
+        print(explanation)
+
+    except ValueError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
 if __name__ == "__main__":
