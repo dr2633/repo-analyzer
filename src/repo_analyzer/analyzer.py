@@ -2,6 +2,7 @@ import os
 import json
 from github import Github, GithubException
 from urllib.parse import urlparse
+from datetime import datetime
 
 
 class GitHubAPI:
@@ -70,6 +71,26 @@ class GitHubAPI:
             raise Exception(f"Error fetching repository info: {e}")
 
 
+def format_structure(structure):
+    formatted = []
+    for item in structure:
+        if item['type'] == 'directory':
+            formatted.append({
+                'type': 'directory',
+                'name': item['name'],
+                'path': item['path'],
+                'contents': format_structure(item['contents'])
+            })
+        else:
+            formatted.append({
+                'type': 'file',
+                'name': item['name'],
+                'path': item['path'],
+                'extension': os.path.splitext(item['name'])[1].lower() or 'no_extension'
+            })
+    return formatted
+
+
 def analyze_repository(repo_url):
     api = GitHubAPI()
     structure = api.get_repo_structure(repo_url)
@@ -77,10 +98,13 @@ def analyze_repository(repo_url):
 
     analysis = {
         'info': info,
-        'file_count': count_files(structure),
-        'directory_count': count_directories(structure),
-        'max_depth': calculate_max_depth(structure),
-        'file_types': count_file_types(structure),
+        'structure': format_structure(structure),
+        'summary': {
+            'file_count': count_files(structure),
+            'directory_count': count_directories(structure),
+            'max_depth': calculate_max_depth(structure),
+            'file_types': count_file_types(structure),
+        }
     }
 
     return analysis
@@ -133,11 +157,11 @@ def print_analysis(analysis):
     print(f"Description: {analysis['info']['description']}")
     print(f"Stars: {analysis['info']['stars']}")
     print(f"Forks: {analysis['info']['forks']}")
-    print(f"File Count: {analysis['file_count']}")
-    print(f"Directory Count: {analysis['directory_count']}")
-    print(f"Max Directory Depth: {analysis['max_depth']}")
+    print(f"File Count: {analysis['summary']['file_count']}")
+    print(f"Directory Count: {analysis['summary']['directory_count']}")
+    print(f"Max Directory Depth: {analysis['summary']['max_depth']}")
     print("\nFile Types:")
-    for file_type, count in analysis['file_types'].items():
+    for file_type, count in analysis['summary']['file_types'].items():
         print(f"  {file_type}: {count}")
 
 
@@ -147,9 +171,17 @@ def main(repo_url):
 
     # Convert to JSON for easy input to LLM
     json_output = json.dumps(analysis_result, indent=2, default=str)
-    print("\nJSON Output:")
-    print(json_output)
-    # In a real scenario, you might want to save this to a file or pass it directly to an LLM
+
+    # Save JSON to file
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"repo_analysis_{timestamp}.json"
+    with open(filename, 'w') as f:
+        f.write(json_output)
+    print(f"\nFull analysis saved to {filename}")
+
+    # Print a truncated version of the JSON output
+    print("\nTruncated JSON Output (first 1000 characters):")
+    print(json_output[:1000] + "... (truncated)")
 
 
 if __name__ == "__main__":

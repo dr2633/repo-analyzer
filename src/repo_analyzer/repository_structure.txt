@@ -1,9 +1,7 @@
-github-repo-analyzer/
-.gitignore
-README.md
-requirements.txt
-setup.py
-repository_structure.txt
-src/
+    analyzer.py
+    __init__.py
+    github_api.py
+    utils.py
+    repository_structure.txt
 
-Last updated: 2024-10-09 14:52:50
+Last updated: 2024-10-09 17:56:45
