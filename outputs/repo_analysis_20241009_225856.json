@@ -1,0 +1,695 @@
+{
+  "info": {
+    "name": "ProLLaMA",
+    "full_name": "PKU-YuanGroup/ProLLaMA",
+    "description": "A Protein Large Language Model for Multi-Task Protein Language Processing",
+    "stars": 131,
+    "forks": 18,
+    "watchers": 131,
+    "language": "Python",
+    "created_at": "2024-02-24 06:50:29+00:00",
+    "updated_at": "2024-10-09 20:51:38+00:00",
+    "default_branch": "main",
+    "open_issues": 1,
+    "license": "Apache License 2.0"
+  },
+  "structure": [
+    {
+      "type": "file",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "img",
+      "path": "img",
+      "contents": [
+        {
+          "type": "file",
+          "name": "1.txt",
+          "path": "img/1.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "intro.png",
+          "path": "img/intro.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "r1.jpg",
+          "path": "img/r1.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "type": "file",
+          "name": "r2.jpg",
+          "path": "img/r2.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "type": "file",
+          "name": "r3.jpg",
+          "path": "img/r3.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "type": "file",
+          "name": "r4.jpg",
+          "path": "img/r4.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "type": "file",
+          "name": "r5.png",
+          "path": "img/r5.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "train_framework_v3.png",
+          "path": "img/train_framework_v3.png",
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "img/1.txt",
+      "path": "img/1.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "img/intro.png",
+      "path": "img/intro.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "img/r1.jpg",
+      "path": "img/r1.jpg",
+      "extension": ".jpg"
+    },
+    {
+      "type": "file",
+      "name": "img/r2.jpg",
+      "path": "img/r2.jpg",
+      "extension": ".jpg"
+    },
+    {
+      "type": "file",
+      "name": "img/r3.jpg",
+      "path": "img/r3.jpg",
+      "extension": ".jpg"
+    },
+    {
+      "type": "file",
+      "name": "img/r4.jpg",
+      "path": "img/r4.jpg",
+      "extension": ".jpg"
+    },
+    {
+      "type": "file",
+      "name": "img/r5.png",
+      "path": "img/r5.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "img/train_framework_v3.png",
+      "path": "img/train_framework_v3.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "requirements.txt",
+      "path": "requirements.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "scripts",
+      "path": "scripts",
+      "contents": [
+        {
+          "type": "file",
+          "name": "build_instruction_dataset.py",
+          "path": "scripts/build_instruction_dataset.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "ds_zero2_no_offload.json",
+          "path": "scripts/ds_zero2_no_offload.json",
+          "extension": ".json"
+        },
+        {
+          "type": "file",
+          "name": "infer.py",
+          "path": "scripts/infer.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "instruction_tune.py",
+          "path": "scripts/instruction_tune.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "instruction_tuning_dataset",
+          "path": "scripts/instruction_tuning_dataset",
+          "contents": [
+            {
+              "type": "file",
+              "name": "example.json",
+              "path": "scripts/instruction_tuning_dataset/example.json",
+              "extension": ".json"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "mutation.py",
+          "path": "scripts/mutation.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "peft",
+          "path": "scripts/peft",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "scripts/peft/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "mapping.py",
+              "path": "scripts/peft/mapping.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "peft_model.py",
+              "path": "scripts/peft/peft_model.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "tuners",
+              "path": "scripts/peft/tuners",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "scripts/peft/tuners/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "lora.py",
+                  "path": "scripts/peft/tuners/lora.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "p_tuning.py",
+                  "path": "scripts/peft/tuners/p_tuning.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "prefix_tuning.py",
+                  "path": "scripts/peft/tuners/prefix_tuning.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "prompt_tuning.py",
+                  "path": "scripts/peft/tuners/prompt_tuning.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "utils",
+              "path": "scripts/peft/utils",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "scripts/peft/utils/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "adapters_utils.py",
+                  "path": "scripts/peft/utils/adapters_utils.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "config.py",
+                  "path": "scripts/peft/utils/config.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "other.py",
+                  "path": "scripts/peft/utils/other.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "save_and_load.py",
+                  "path": "scripts/peft/utils/save_and_load.py",
+                  "extension": ".py"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "pretrain.py",
+          "path": "scripts/pretrain.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "pretraining_dataset",
+          "path": "scripts/pretraining_dataset",
+          "contents": [
+            {
+              "type": "file",
+              "name": "example.txt",
+              "path": "scripts/pretraining_dataset/example.txt",
+              "extension": ".txt"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "readme.md",
+          "path": "scripts/readme.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "run_it.sh",
+          "path": "scripts/run_it.sh",
+          "extension": ".sh"
+        },
+        {
+          "type": "file",
+          "name": "run_pt.sh",
+          "path": "scripts/run_pt.sh",
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/build_instruction_dataset.py",
+      "path": "scripts/build_instruction_dataset.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/ds_zero2_no_offload.json",
+      "path": "scripts/ds_zero2_no_offload.json",
+      "extension": ".json"
+    },
+    {
+      "type": "file",
+      "name": "scripts/infer.py",
+      "path": "scripts/infer.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/instruction_tune.py",
+      "path": "scripts/instruction_tune.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "scripts/instruction_tuning_dataset",
+      "path": "scripts/instruction_tuning_dataset",
+      "contents": [
+        {
+          "type": "file",
+          "name": "example.json",
+          "path": "scripts/instruction_tuning_dataset/example.json",
+          "extension": ".json"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/instruction_tuning_dataset/example.json",
+      "path": "scripts/instruction_tuning_dataset/example.json",
+      "extension": ".json"
+    },
+    {
+      "type": "file",
+      "name": "scripts/mutation.py",
+      "path": "scripts/mutation.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "scripts/peft",
+      "path": "scripts/peft",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "scripts/peft/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "mapping.py",
+          "path": "scripts/peft/mapping.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "peft_model.py",
+          "path": "scripts/peft/peft_model.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "tuners",
+          "path": "scripts/peft/tuners",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "scripts/peft/tuners/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "lora.py",
+              "path": "scripts/peft/tuners/lora.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "p_tuning.py",
+              "path": "scripts/peft/tuners/p_tuning.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "prefix_tuning.py",
+              "path": "scripts/peft/tuners/prefix_tuning.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "prompt_tuning.py",
+              "path": "scripts/peft/tuners/prompt_tuning.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "utils",
+          "path": "scripts/peft/utils",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "scripts/peft/utils/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "adapters_utils.py",
+              "path": "scripts/peft/utils/adapters_utils.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "config.py",
+              "path": "scripts/peft/utils/config.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "other.py",
+              "path": "scripts/peft/utils/other.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "save_and_load.py",
+              "path": "scripts/peft/utils/save_and_load.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/__init__.py",
+      "path": "scripts/peft/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/mapping.py",
+      "path": "scripts/peft/mapping.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/peft_model.py",
+      "path": "scripts/peft/peft_model.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "scripts/peft/tuners",
+      "path": "scripts/peft/tuners",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "scripts/peft/tuners/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "lora.py",
+          "path": "scripts/peft/tuners/lora.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "p_tuning.py",
+          "path": "scripts/peft/tuners/p_tuning.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "prefix_tuning.py",
+          "path": "scripts/peft/tuners/prefix_tuning.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "prompt_tuning.py",
+          "path": "scripts/peft/tuners/prompt_tuning.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/tuners/__init__.py",
+      "path": "scripts/peft/tuners/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/tuners/lora.py",
+      "path": "scripts/peft/tuners/lora.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/tuners/p_tuning.py",
+      "path": "scripts/peft/tuners/p_tuning.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/tuners/prefix_tuning.py",
+      "path": "scripts/peft/tuners/prefix_tuning.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/tuners/prompt_tuning.py",
+      "path": "scripts/peft/tuners/prompt_tuning.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "scripts/peft/utils",
+      "path": "scripts/peft/utils",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "scripts/peft/utils/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "adapters_utils.py",
+          "path": "scripts/peft/utils/adapters_utils.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "config.py",
+          "path": "scripts/peft/utils/config.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "other.py",
+          "path": "scripts/peft/utils/other.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "save_and_load.py",
+          "path": "scripts/peft/utils/save_and_load.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/utils/__init__.py",
+      "path": "scripts/peft/utils/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/utils/adapters_utils.py",
+      "path": "scripts/peft/utils/adapters_utils.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/utils/config.py",
+      "path": "scripts/peft/utils/config.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/utils/other.py",
+      "path": "scripts/peft/utils/other.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/peft/utils/save_and_load.py",
+      "path": "scripts/peft/utils/save_and_load.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "scripts/pretrain.py",
+      "path": "scripts/pretrain.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "scripts/pretraining_dataset",
+      "path": "scripts/pretraining_dataset",
+      "contents": [
+        {
+          "type": "file",
+          "name": "example.txt",
+          "path": "scripts/pretraining_dataset/example.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "scripts/pretraining_dataset/example.txt",
+      "path": "scripts/pretraining_dataset/example.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "scripts/readme.md",
+      "path": "scripts/readme.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "scripts/run_it.sh",
+      "path": "scripts/run_it.sh",
+      "extension": ".sh"
+    },
+    {
+      "type": "file",
+      "name": "scripts/run_pt.sh",
+      "path": "scripts/run_pt.sh",
+      "extension": ".sh"
+    },
+    {
+      "type": "file",
+      "name": "superfamilies.txt",
+      "path": "superfamilies.txt",
+      "extension": ".txt"
+    }
+  ],
+  "summary": {
+    "file_count": 94,
+    "directory_count": 14,
+    "max_depth": 3,
+    "file_types": {
+      "no_extension": 2,
+      ".md": 3,
+      ".txt": 7,
+      ".png": 6,
+      ".jpg": 8,
+      ".py": 59,
+      ".json": 5,
+      ".sh": 4
+    }
+  }
+}

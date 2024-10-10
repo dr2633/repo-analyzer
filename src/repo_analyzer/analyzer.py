@@ -191,14 +191,10 @@ def print_analysis(analysis):
     for file_type, count in analysis['summary']['file_types'].items():
         print(f"  {file_type}: {count}")
 
-
 def main(repo_url):
     try:
         analysis_result = analyze_repository(repo_url)
         print_analysis(analysis_result)
-
-        nl_generator = NLExplanationGenerator()
-        explanation = nl_generator.generate_explanation(analysis_result)
 
         output_dir = 'outputs'
         os.makedirs(output_dir, exist_ok=True)
@@ -207,25 +203,15 @@ def main(repo_url):
         json_filename = f"repo_analysis_{timestamp}.json"
         json_filepath = os.path.join(output_dir, json_filename)
 
+        # Serialize the JSON output and save it
         with open(json_filepath, 'w') as f:
-            json.dump(analysis_result, f, indent=2)
+            json.dump(analysis_result, f, indent=2, default=str)
         print(f"\nFull analysis saved to {json_filepath}")
-
-        nl_filename = f"repo_explanation_{timestamp}.txt"
-        nl_filepath = os.path.join(output_dir, nl_filename)
-
-        with open(nl_filepath, 'w') as f:
-            f.write(explanation)
-        print(f"\nNatural language explanation saved to {nl_filepath}")
-
-        print("\nNatural Language Explanation:")
-        print(explanation)
 
     except ValueError as e:
         print(f"Error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-
 
 if __name__ == "__main__":
     repo_url = input("Enter the GitHub repository URL to analyze: ")

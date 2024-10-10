@@ -1,7 +1,36 @@
-    requirements.txt
-    README.md
-    setup.py
-    .gitignore
-    repository_structure.txt
-
-Last updated: 2024-10-09 15:00:02
+repo-to-json/
+│
+├── src/
+│   ├── __init__.py
+│   ├── repository_parser.py
+│   ├── json_output.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── api_client.py
+│   │   ├── file_system.py
+│   └── tests/
+│       ├── __init__.py
+│       └── test_repository_parser.py
+│
+├── data/
+│   └── sample_repositories/
+│       ├── sample_repo_1/
+│       ├── sample_repo_2/
+│       └── sample_repo_3/
+│
+├── docs/
+│   ├── project_overview.md
+│   └── api_documentation.md
+│
+├── notebooks/
+│   └── repository_analysis.ipynb
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── setup.py
+└── LICENSE

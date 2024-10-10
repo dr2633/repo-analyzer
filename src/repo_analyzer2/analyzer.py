@@ -49,7 +49,7 @@ def main(repo_url, output_dir):
 
         # Serialize the JSON, ensuring datetime objects are converted to strings
         with open(json_filepath, 'w') as f:
-            json.dump(analysis_result, f, indent=2, default=str)  # <-- Use default=str
+            json.dump(analysis_result, f, indent=2, default=str)  # <-- Add default=str
         print(f"\nFull analysis saved to {json_filepath}")
 
         nl_filename = f"repo_explanation_{timestamp}.txt"

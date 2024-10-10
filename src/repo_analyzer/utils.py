@@ -12,7 +12,7 @@ def get_directory_structure(root_dir):
         indent = ' ' * 4 * level
         folder = os.path.basename(root)
         if level == 0:
-            structure.append({'type': 'dir', 'name': 'github-repo-analyzer', 'contents': []})
+            structure.append({'type': 'dir', 'name': 'github-repo_analyzer2', 'contents': []})
             current = structure[0]['contents']
         else:
             current.append({'type': 'dir', 'name': folder, 'contents': []})
@@ -40,10 +40,10 @@ def filter_repo_structure(structure):
 
     def filter_item(item):
         if item['type'] == 'dir':
-            if item['name'] in desired_dirs or item['name'] == 'github-repo-analyzer':
+            if item['name'] in desired_dirs or item['name'] == 'github-repo_analyzer2':
                 filtered_contents = [filter_item(i) for i in item['contents']]
                 filtered_contents = [i for i in filtered_contents if i is not None]
-                if filtered_contents or item['name'] == 'github-repo-analyzer':
+                if filtered_contents or item['name'] == 'github-repo_analyzer2':
                     return {'type': 'dir', 'name': item['name'], 'contents': filtered_contents}
         elif item['type'] == 'file' and item['name'] in desired_files:
             return item
@@ -58,7 +58,7 @@ def structure_to_text(structure, indent=''):
     """
     text = []
     if structure['type'] == 'dir':
-        if structure['name'] != 'github-repo-analyzer':
+        if structure['name'] != 'github-repo_analyzer2':
             text.append(f"{indent}{structure['name']}/")
         for item in structure['contents']:
             text.extend(structure_to_text(item, indent + '    '))
