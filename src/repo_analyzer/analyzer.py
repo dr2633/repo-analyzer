@@ -191,16 +191,22 @@ def print_analysis(analysis):
     for file_type, count in analysis['summary']['file_types'].items():
         print(f"  {file_type}: {count}")
 
+
 def main(repo_url):
     try:
+        # Get repository structure and info
         analysis_result = analyze_repository(repo_url)
         print_analysis(analysis_result)
 
+        # Extract repo name for file naming
+        repo_name = analysis_result['info']['name']
+
+        # Create outputs directory if not exists
         output_dir = 'outputs'
         os.makedirs(output_dir, exist_ok=True)
 
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        json_filename = f"repo_analysis_{timestamp}.json"
+        # Save the analysis result in a JSON file named after the repo
+        json_filename = f"repo_analysis_{repo_name}.json"
         json_filepath = os.path.join(output_dir, json_filename)
 
         # Serialize the JSON output and save it

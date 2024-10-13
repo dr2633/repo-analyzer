@@ -4,17 +4,6 @@
 
 The **GitHub Repository Analyzer** is a tool designed to extract, analyze, and evaluate the structure of GitHub repositories. It provides a JSON representation of a repository’s structure and enables users to compare it against best practices or a defined "gold standard" structure. This repository aims to improve the consistency, maintainability, and scalability of codebases by offering insights into the layout and organization of project files.
 
-## Motivation 
-
-A well-organized repository improves collaboration, reduces onboarding time for new developers, and ensures that projects are easier to maintain over time. However, there is often a disconnect between a repository's actual structure and best practices for organizing code, tests, documentation, and configuration files.
-
-The GitHub Repository Analyzer addresses this gap by:
-- Providing an automated way to assess the structure of any repository.
-- Offering suggestions on improving repository organization.
-- Facilitating the comparison of repository structures across similar projects, enabling the development of a "best practices" template for various domains (e.g., machine learning, web development, system programming).
-
-With this tool, developers and teams can ensure their repositories adhere to best practices and are well-organized for long-term development.
-
 ---
 
 ## Instructions for Accessing and Using a GitHub Token
@@ -120,3 +109,4 @@ We welcome contributions that improve the analyzer, add additional evaluation me
 ## License
 
 This project is licensed under the **Apache License 2.0**.
+

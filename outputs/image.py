@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # Load the JSON data
-with open("repo_analysis_20241009_225856.json") as f:
+with open("previous /repo_analysis_20241009_225856.json") as f:
     data = json.load(f)
 
 # Extract file type distribution from the summary
