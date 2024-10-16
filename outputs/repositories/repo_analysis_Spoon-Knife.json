@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Spoon-Knife",
+    "full_name": "octocat/Spoon-Knife",
+    "description": "This repo is for demonstration purposes only.",
+    "stars": 12568,
+    "forks": 146328,
+    "watchers": 12568,
+    "language": "HTML",
+    "created_at": "2011-01-27 19:30:43+00:00",
+    "updated_at": "2024-10-16 14:46:53+00:00",
+    "default_branch": "main",
+    "open_issues": 17869,
+    "license": null
+  },
+  "structure": [
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "index.html",
+      "path": "index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "styles.css",
+      "path": "styles.css",
+      "extension": ".css"
+    }
+  ],
+  "summary": {
+    "file_count": 3,
+    "directory_count": 0,
+    "max_depth": 0,
+    "file_types": {
+      ".md": 1,
+      ".html": 1,
+      ".css": 1
+    }
+  }
+}

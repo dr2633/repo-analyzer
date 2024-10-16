@@ -1,0 +1,5798 @@
+{
+  "info": {
+    "name": "flask",
+    "full_name": "pallets/flask",
+    "description": "The Python micro framework for building web applications.",
+    "stars": 67848,
+    "forks": 16199,
+    "watchers": 67848,
+    "language": "Python",
+    "created_at": "2010-04-06 11:11:59+00:00",
+    "updated_at": "2024-10-16 18:01:44+00:00",
+    "default_branch": "main",
+    "open_issues": 13,
+    "license": "BSD 3-Clause \"New\" or \"Revised\" License"
+  },
+  "structure": [
+    {
+      "type": "directory",
+      "name": ".devcontainer",
+      "path": ".devcontainer",
+      "contents": [
+        {
+          "type": "file",
+          "name": "devcontainer.json",
+          "path": ".devcontainer/devcontainer.json",
+          "extension": ".json"
+        },
+        {
+          "type": "file",
+          "name": "on-create-command.sh",
+          "path": ".devcontainer/on-create-command.sh",
+          "extension": ".sh"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".devcontainer/devcontainer.json",
+      "path": ".devcontainer/devcontainer.json",
+      "extension": ".json"
+    },
+    {
+      "type": "file",
+      "name": ".devcontainer/on-create-command.sh",
+      "path": ".devcontainer/on-create-command.sh",
+      "extension": ".sh"
+    },
+    {
+      "type": "file",
+      "name": ".editorconfig",
+      "path": ".editorconfig",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": ".github",
+      "path": ".github",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "ISSUE_TEMPLATE",
+          "path": ".github/ISSUE_TEMPLATE",
+          "contents": [
+            {
+              "type": "file",
+              "name": "bug-report.md",
+              "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+              "extension": ".md"
+            },
+            {
+              "type": "file",
+              "name": "config.yml",
+              "path": ".github/ISSUE_TEMPLATE/config.yml",
+              "extension": ".yml"
+            },
+            {
+              "type": "file",
+              "name": "feature-request.md",
+              "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+              "extension": ".md"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "pull_request_template.md",
+          "path": ".github/pull_request_template.md",
+          "extension": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "workflows",
+          "path": ".github/workflows",
+          "contents": [
+            {
+              "type": "file",
+              "name": "lock.yaml",
+              "path": ".github/workflows/lock.yaml",
+              "extension": ".yaml"
+            },
+            {
+              "type": "file",
+              "name": "pre-commit.yaml",
+              "path": ".github/workflows/pre-commit.yaml",
+              "extension": ".yaml"
+            },
+            {
+              "type": "file",
+              "name": "publish.yaml",
+              "path": ".github/workflows/publish.yaml",
+              "extension": ".yaml"
+            },
+            {
+              "type": "file",
+              "name": "tests.yaml",
+              "path": ".github/workflows/tests.yaml",
+              "extension": ".yaml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": ".github/ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "contents": [
+        {
+          "type": "file",
+          "name": "bug-report.md",
+          "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "config.yml",
+          "path": ".github/ISSUE_TEMPLATE/config.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "feature-request.md",
+          "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+          "extension": ".md"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/config.yml",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/pull_request_template.md",
+      "path": ".github/pull_request_template.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": ".github/workflows",
+      "path": ".github/workflows",
+      "contents": [
+        {
+          "type": "file",
+          "name": "lock.yaml",
+          "path": ".github/workflows/lock.yaml",
+          "extension": ".yaml"
+        },
+        {
+          "type": "file",
+          "name": "pre-commit.yaml",
+          "path": ".github/workflows/pre-commit.yaml",
+          "extension": ".yaml"
+        },
+        {
+          "type": "file",
+          "name": "publish.yaml",
+          "path": ".github/workflows/publish.yaml",
+          "extension": ".yaml"
+        },
+        {
+          "type": "file",
+          "name": "tests.yaml",
+          "path": ".github/workflows/tests.yaml",
+          "extension": ".yaml"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/lock.yaml",
+      "path": ".github/workflows/lock.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/pre-commit.yaml",
+      "path": ".github/workflows/pre-commit.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/publish.yaml",
+      "path": ".github/workflows/publish.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/tests.yaml",
+      "path": ".github/workflows/tests.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": ".pre-commit-config.yaml",
+      "path": ".pre-commit-config.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".readthedocs.yaml",
+      "path": ".readthedocs.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": "CHANGES.rst",
+      "path": "CHANGES.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "CODE_OF_CONDUCT.md",
+      "path": "CODE_OF_CONDUCT.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "CONTRIBUTING.rst",
+      "path": "CONTRIBUTING.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "LICENSE.txt",
+      "path": "LICENSE.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "docs",
+      "path": "docs",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "docs/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "directory",
+          "name": "_static",
+          "path": "docs/_static",
+          "contents": [
+            {
+              "type": "file",
+              "name": "debugger.png",
+              "path": "docs/_static/debugger.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "flask-horizontal.png",
+              "path": "docs/_static/flask-horizontal.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "flask-vertical.png",
+              "path": "docs/_static/flask-vertical.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "pycharm-run-config.png",
+              "path": "docs/_static/pycharm-run-config.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "shortcut-icon.png",
+              "path": "docs/_static/shortcut-icon.png",
+              "extension": ".png"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "api.rst",
+          "path": "docs/api.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "appcontext.rst",
+          "path": "docs/appcontext.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "async-await.rst",
+          "path": "docs/async-await.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "blueprints.rst",
+          "path": "docs/blueprints.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "changes.rst",
+          "path": "docs/changes.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "cli.rst",
+          "path": "docs/cli.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "conf.py",
+          "path": "docs/conf.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "config.rst",
+          "path": "docs/config.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "contributing.rst",
+          "path": "docs/contributing.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "debugging.rst",
+          "path": "docs/debugging.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "directory",
+          "name": "deploying",
+          "path": "docs/deploying",
+          "contents": [
+            {
+              "type": "file",
+              "name": "apache-httpd.rst",
+              "path": "docs/deploying/apache-httpd.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "asgi.rst",
+              "path": "docs/deploying/asgi.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "eventlet.rst",
+              "path": "docs/deploying/eventlet.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "gevent.rst",
+              "path": "docs/deploying/gevent.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "gunicorn.rst",
+              "path": "docs/deploying/gunicorn.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "index.rst",
+              "path": "docs/deploying/index.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "mod_wsgi.rst",
+              "path": "docs/deploying/mod_wsgi.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "nginx.rst",
+              "path": "docs/deploying/nginx.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "proxy_fix.rst",
+              "path": "docs/deploying/proxy_fix.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "uwsgi.rst",
+              "path": "docs/deploying/uwsgi.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "waitress.rst",
+              "path": "docs/deploying/waitress.rst",
+              "extension": ".rst"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "design.rst",
+          "path": "docs/design.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "errorhandling.rst",
+          "path": "docs/errorhandling.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "extensiondev.rst",
+          "path": "docs/extensiondev.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "extensions.rst",
+          "path": "docs/extensions.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "index.rst",
+          "path": "docs/index.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "installation.rst",
+          "path": "docs/installation.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "license.rst",
+          "path": "docs/license.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "lifecycle.rst",
+          "path": "docs/lifecycle.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "logging.rst",
+          "path": "docs/logging.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "make.bat",
+          "path": "docs/make.bat",
+          "extension": ".bat"
+        },
+        {
+          "type": "directory",
+          "name": "patterns",
+          "path": "docs/patterns",
+          "contents": [
+            {
+              "type": "file",
+              "name": "appdispatch.rst",
+              "path": "docs/patterns/appdispatch.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "appfactories.rst",
+              "path": "docs/patterns/appfactories.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "caching.rst",
+              "path": "docs/patterns/caching.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "celery.rst",
+              "path": "docs/patterns/celery.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "deferredcallbacks.rst",
+              "path": "docs/patterns/deferredcallbacks.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "favicon.rst",
+              "path": "docs/patterns/favicon.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "fileuploads.rst",
+              "path": "docs/patterns/fileuploads.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "flashing.rst",
+              "path": "docs/patterns/flashing.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "index.rst",
+              "path": "docs/patterns/index.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "javascript.rst",
+              "path": "docs/patterns/javascript.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "jquery.rst",
+              "path": "docs/patterns/jquery.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "lazyloading.rst",
+              "path": "docs/patterns/lazyloading.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "methodoverrides.rst",
+              "path": "docs/patterns/methodoverrides.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "mongoengine.rst",
+              "path": "docs/patterns/mongoengine.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "packages.rst",
+              "path": "docs/patterns/packages.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "requestchecksum.rst",
+              "path": "docs/patterns/requestchecksum.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "singlepageapplications.rst",
+              "path": "docs/patterns/singlepageapplications.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "sqlalchemy.rst",
+              "path": "docs/patterns/sqlalchemy.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "sqlite3.rst",
+              "path": "docs/patterns/sqlite3.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "streaming.rst",
+              "path": "docs/patterns/streaming.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "subclassing.rst",
+              "path": "docs/patterns/subclassing.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "templateinheritance.rst",
+              "path": "docs/patterns/templateinheritance.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "urlprocessors.rst",
+              "path": "docs/patterns/urlprocessors.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "viewdecorators.rst",
+              "path": "docs/patterns/viewdecorators.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "wtforms.rst",
+              "path": "docs/patterns/wtforms.rst",
+              "extension": ".rst"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "quickstart.rst",
+          "path": "docs/quickstart.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "reqcontext.rst",
+          "path": "docs/reqcontext.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "server.rst",
+          "path": "docs/server.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "shell.rst",
+          "path": "docs/shell.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "signals.rst",
+          "path": "docs/signals.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "templating.rst",
+          "path": "docs/templating.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "testing.rst",
+          "path": "docs/testing.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "directory",
+          "name": "tutorial",
+          "path": "docs/tutorial",
+          "contents": [
+            {
+              "type": "file",
+              "name": "blog.rst",
+              "path": "docs/tutorial/blog.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "database.rst",
+              "path": "docs/tutorial/database.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "deploy.rst",
+              "path": "docs/tutorial/deploy.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "factory.rst",
+              "path": "docs/tutorial/factory.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "flaskr_edit.png",
+              "path": "docs/tutorial/flaskr_edit.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "flaskr_index.png",
+              "path": "docs/tutorial/flaskr_index.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "flaskr_login.png",
+              "path": "docs/tutorial/flaskr_login.png",
+              "extension": ".png"
+            },
+            {
+              "type": "file",
+              "name": "index.rst",
+              "path": "docs/tutorial/index.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "install.rst",
+              "path": "docs/tutorial/install.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "layout.rst",
+              "path": "docs/tutorial/layout.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "next.rst",
+              "path": "docs/tutorial/next.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "static.rst",
+              "path": "docs/tutorial/static.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "templates.rst",
+              "path": "docs/tutorial/templates.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "tests.rst",
+              "path": "docs/tutorial/tests.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "views.rst",
+              "path": "docs/tutorial/views.rst",
+              "extension": ".rst"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "views.rst",
+          "path": "docs/views.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "web-security.rst",
+          "path": "docs/web-security.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/Makefile",
+      "path": "docs/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": "docs/_static",
+      "path": "docs/_static",
+      "contents": [
+        {
+          "type": "file",
+          "name": "debugger.png",
+          "path": "docs/_static/debugger.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "flask-horizontal.png",
+          "path": "docs/_static/flask-horizontal.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "flask-vertical.png",
+          "path": "docs/_static/flask-vertical.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "pycharm-run-config.png",
+          "path": "docs/_static/pycharm-run-config.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "shortcut-icon.png",
+          "path": "docs/_static/shortcut-icon.png",
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/debugger.png",
+      "path": "docs/_static/debugger.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/flask-horizontal.png",
+      "path": "docs/_static/flask-horizontal.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/flask-vertical.png",
+      "path": "docs/_static/flask-vertical.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/pycharm-run-config.png",
+      "path": "docs/_static/pycharm-run-config.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/shortcut-icon.png",
+      "path": "docs/_static/shortcut-icon.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/api.rst",
+      "path": "docs/api.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/appcontext.rst",
+      "path": "docs/appcontext.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/async-await.rst",
+      "path": "docs/async-await.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/blueprints.rst",
+      "path": "docs/blueprints.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/changes.rst",
+      "path": "docs/changes.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/cli.rst",
+      "path": "docs/cli.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/conf.py",
+      "path": "docs/conf.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "docs/config.rst",
+      "path": "docs/config.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/contributing.rst",
+      "path": "docs/contributing.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/debugging.rst",
+      "path": "docs/debugging.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "docs/deploying",
+      "path": "docs/deploying",
+      "contents": [
+        {
+          "type": "file",
+          "name": "apache-httpd.rst",
+          "path": "docs/deploying/apache-httpd.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "asgi.rst",
+          "path": "docs/deploying/asgi.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "eventlet.rst",
+          "path": "docs/deploying/eventlet.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "gevent.rst",
+          "path": "docs/deploying/gevent.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "gunicorn.rst",
+          "path": "docs/deploying/gunicorn.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "index.rst",
+          "path": "docs/deploying/index.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "mod_wsgi.rst",
+          "path": "docs/deploying/mod_wsgi.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "nginx.rst",
+          "path": "docs/deploying/nginx.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "proxy_fix.rst",
+          "path": "docs/deploying/proxy_fix.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "uwsgi.rst",
+          "path": "docs/deploying/uwsgi.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "waitress.rst",
+          "path": "docs/deploying/waitress.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/apache-httpd.rst",
+      "path": "docs/deploying/apache-httpd.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/asgi.rst",
+      "path": "docs/deploying/asgi.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/eventlet.rst",
+      "path": "docs/deploying/eventlet.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/gevent.rst",
+      "path": "docs/deploying/gevent.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/gunicorn.rst",
+      "path": "docs/deploying/gunicorn.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/index.rst",
+      "path": "docs/deploying/index.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/mod_wsgi.rst",
+      "path": "docs/deploying/mod_wsgi.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/nginx.rst",
+      "path": "docs/deploying/nginx.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/proxy_fix.rst",
+      "path": "docs/deploying/proxy_fix.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/uwsgi.rst",
+      "path": "docs/deploying/uwsgi.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/deploying/waitress.rst",
+      "path": "docs/deploying/waitress.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/design.rst",
+      "path": "docs/design.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/errorhandling.rst",
+      "path": "docs/errorhandling.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/extensiondev.rst",
+      "path": "docs/extensiondev.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/extensions.rst",
+      "path": "docs/extensions.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/index.rst",
+      "path": "docs/index.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/installation.rst",
+      "path": "docs/installation.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/license.rst",
+      "path": "docs/license.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/lifecycle.rst",
+      "path": "docs/lifecycle.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/logging.rst",
+      "path": "docs/logging.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/make.bat",
+      "path": "docs/make.bat",
+      "extension": ".bat"
+    },
+    {
+      "type": "directory",
+      "name": "docs/patterns",
+      "path": "docs/patterns",
+      "contents": [
+        {
+          "type": "file",
+          "name": "appdispatch.rst",
+          "path": "docs/patterns/appdispatch.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "appfactories.rst",
+          "path": "docs/patterns/appfactories.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "caching.rst",
+          "path": "docs/patterns/caching.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "celery.rst",
+          "path": "docs/patterns/celery.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "deferredcallbacks.rst",
+          "path": "docs/patterns/deferredcallbacks.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "favicon.rst",
+          "path": "docs/patterns/favicon.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "fileuploads.rst",
+          "path": "docs/patterns/fileuploads.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "flashing.rst",
+          "path": "docs/patterns/flashing.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "index.rst",
+          "path": "docs/patterns/index.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "javascript.rst",
+          "path": "docs/patterns/javascript.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "jquery.rst",
+          "path": "docs/patterns/jquery.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "lazyloading.rst",
+          "path": "docs/patterns/lazyloading.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "methodoverrides.rst",
+          "path": "docs/patterns/methodoverrides.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "mongoengine.rst",
+          "path": "docs/patterns/mongoengine.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "packages.rst",
+          "path": "docs/patterns/packages.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "requestchecksum.rst",
+          "path": "docs/patterns/requestchecksum.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "singlepageapplications.rst",
+          "path": "docs/patterns/singlepageapplications.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "sqlalchemy.rst",
+          "path": "docs/patterns/sqlalchemy.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "sqlite3.rst",
+          "path": "docs/patterns/sqlite3.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "streaming.rst",
+          "path": "docs/patterns/streaming.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "subclassing.rst",
+          "path": "docs/patterns/subclassing.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "templateinheritance.rst",
+          "path": "docs/patterns/templateinheritance.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "urlprocessors.rst",
+          "path": "docs/patterns/urlprocessors.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "viewdecorators.rst",
+          "path": "docs/patterns/viewdecorators.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "wtforms.rst",
+          "path": "docs/patterns/wtforms.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/appdispatch.rst",
+      "path": "docs/patterns/appdispatch.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/appfactories.rst",
+      "path": "docs/patterns/appfactories.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/caching.rst",
+      "path": "docs/patterns/caching.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/celery.rst",
+      "path": "docs/patterns/celery.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/deferredcallbacks.rst",
+      "path": "docs/patterns/deferredcallbacks.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/favicon.rst",
+      "path": "docs/patterns/favicon.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/fileuploads.rst",
+      "path": "docs/patterns/fileuploads.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/flashing.rst",
+      "path": "docs/patterns/flashing.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/index.rst",
+      "path": "docs/patterns/index.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/javascript.rst",
+      "path": "docs/patterns/javascript.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/jquery.rst",
+      "path": "docs/patterns/jquery.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/lazyloading.rst",
+      "path": "docs/patterns/lazyloading.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/methodoverrides.rst",
+      "path": "docs/patterns/methodoverrides.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/mongoengine.rst",
+      "path": "docs/patterns/mongoengine.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/packages.rst",
+      "path": "docs/patterns/packages.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/requestchecksum.rst",
+      "path": "docs/patterns/requestchecksum.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/singlepageapplications.rst",
+      "path": "docs/patterns/singlepageapplications.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/sqlalchemy.rst",
+      "path": "docs/patterns/sqlalchemy.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/sqlite3.rst",
+      "path": "docs/patterns/sqlite3.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/streaming.rst",
+      "path": "docs/patterns/streaming.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/subclassing.rst",
+      "path": "docs/patterns/subclassing.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/templateinheritance.rst",
+      "path": "docs/patterns/templateinheritance.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/urlprocessors.rst",
+      "path": "docs/patterns/urlprocessors.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/viewdecorators.rst",
+      "path": "docs/patterns/viewdecorators.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/patterns/wtforms.rst",
+      "path": "docs/patterns/wtforms.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/quickstart.rst",
+      "path": "docs/quickstart.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/reqcontext.rst",
+      "path": "docs/reqcontext.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/server.rst",
+      "path": "docs/server.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/shell.rst",
+      "path": "docs/shell.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/signals.rst",
+      "path": "docs/signals.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/templating.rst",
+      "path": "docs/templating.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/testing.rst",
+      "path": "docs/testing.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "docs/tutorial",
+      "path": "docs/tutorial",
+      "contents": [
+        {
+          "type": "file",
+          "name": "blog.rst",
+          "path": "docs/tutorial/blog.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "database.rst",
+          "path": "docs/tutorial/database.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "deploy.rst",
+          "path": "docs/tutorial/deploy.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "factory.rst",
+          "path": "docs/tutorial/factory.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "flaskr_edit.png",
+          "path": "docs/tutorial/flaskr_edit.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "flaskr_index.png",
+          "path": "docs/tutorial/flaskr_index.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "flaskr_login.png",
+          "path": "docs/tutorial/flaskr_login.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "index.rst",
+          "path": "docs/tutorial/index.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "install.rst",
+          "path": "docs/tutorial/install.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "layout.rst",
+          "path": "docs/tutorial/layout.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "next.rst",
+          "path": "docs/tutorial/next.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "static.rst",
+          "path": "docs/tutorial/static.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "templates.rst",
+          "path": "docs/tutorial/templates.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "tests.rst",
+          "path": "docs/tutorial/tests.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "views.rst",
+          "path": "docs/tutorial/views.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/blog.rst",
+      "path": "docs/tutorial/blog.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/database.rst",
+      "path": "docs/tutorial/database.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/deploy.rst",
+      "path": "docs/tutorial/deploy.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/factory.rst",
+      "path": "docs/tutorial/factory.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/flaskr_edit.png",
+      "path": "docs/tutorial/flaskr_edit.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/flaskr_index.png",
+      "path": "docs/tutorial/flaskr_index.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/flaskr_login.png",
+      "path": "docs/tutorial/flaskr_login.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/index.rst",
+      "path": "docs/tutorial/index.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/install.rst",
+      "path": "docs/tutorial/install.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/layout.rst",
+      "path": "docs/tutorial/layout.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/next.rst",
+      "path": "docs/tutorial/next.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/static.rst",
+      "path": "docs/tutorial/static.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/templates.rst",
+      "path": "docs/tutorial/templates.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/tests.rst",
+      "path": "docs/tutorial/tests.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/tutorial/views.rst",
+      "path": "docs/tutorial/views.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/views.rst",
+      "path": "docs/views.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/web-security.rst",
+      "path": "docs/web-security.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "examples",
+      "path": "examples",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "celery",
+          "path": "examples/celery",
+          "contents": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "path": "examples/celery/README.md",
+              "extension": ".md"
+            },
+            {
+              "type": "file",
+              "name": "make_celery.py",
+              "path": "examples/celery/make_celery.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "pyproject.toml",
+              "path": "examples/celery/pyproject.toml",
+              "extension": ".toml"
+            },
+            {
+              "type": "file",
+              "name": "requirements.txt",
+              "path": "examples/celery/requirements.txt",
+              "extension": ".txt"
+            },
+            {
+              "type": "directory",
+              "name": "src",
+              "path": "examples/celery/src",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "task_app",
+                  "path": "examples/celery/src/task_app",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "examples/celery/src/task_app/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "file",
+                      "name": "tasks.py",
+                      "path": "examples/celery/src/task_app/tasks.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "templates",
+                      "path": "examples/celery/src/task_app/templates",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "index.html",
+                          "path": "examples/celery/src/task_app/templates/index.html",
+                          "extension": ".html"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "views.py",
+                      "path": "examples/celery/src/task_app/views.py",
+                      "extension": ".py"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "javascript",
+          "path": "examples/javascript",
+          "contents": [
+            {
+              "type": "file",
+              "name": ".gitignore",
+              "path": "examples/javascript/.gitignore",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "LICENSE.rst",
+              "path": "examples/javascript/LICENSE.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "README.rst",
+              "path": "examples/javascript/README.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "directory",
+              "name": "js_example",
+              "path": "examples/javascript/js_example",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "examples/javascript/js_example/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "templates",
+                  "path": "examples/javascript/js_example/templates",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "base.html",
+                      "path": "examples/javascript/js_example/templates/base.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "fetch.html",
+                      "path": "examples/javascript/js_example/templates/fetch.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "jquery.html",
+                      "path": "examples/javascript/js_example/templates/jquery.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "xhr.html",
+                      "path": "examples/javascript/js_example/templates/xhr.html",
+                      "extension": ".html"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "views.py",
+                  "path": "examples/javascript/js_example/views.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "pyproject.toml",
+              "path": "examples/javascript/pyproject.toml",
+              "extension": ".toml"
+            },
+            {
+              "type": "directory",
+              "name": "tests",
+              "path": "examples/javascript/tests",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "conftest.py",
+                  "path": "examples/javascript/tests/conftest.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "test_js_example.py",
+                  "path": "examples/javascript/tests/test_js_example.py",
+                  "extension": ".py"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "tutorial",
+          "path": "examples/tutorial",
+          "contents": [
+            {
+              "type": "file",
+              "name": ".gitignore",
+              "path": "examples/tutorial/.gitignore",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "LICENSE.rst",
+              "path": "examples/tutorial/LICENSE.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "README.rst",
+              "path": "examples/tutorial/README.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "directory",
+              "name": "flaskr",
+              "path": "examples/tutorial/flaskr",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "examples/tutorial/flaskr/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "auth.py",
+                  "path": "examples/tutorial/flaskr/auth.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "blog.py",
+                  "path": "examples/tutorial/flaskr/blog.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "db.py",
+                  "path": "examples/tutorial/flaskr/db.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.sql",
+                  "path": "examples/tutorial/flaskr/schema.sql",
+                  "extension": ".sql"
+                },
+                {
+                  "type": "directory",
+                  "name": "static",
+                  "path": "examples/tutorial/flaskr/static",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "style.css",
+                      "path": "examples/tutorial/flaskr/static/style.css",
+                      "extension": ".css"
+                    }
+                  ]
+                },
+                {
+                  "type": "directory",
+                  "name": "templates",
+                  "path": "examples/tutorial/flaskr/templates",
+                  "contents": [
+                    {
+                      "type": "directory",
+                      "name": "auth",
+                      "path": "examples/tutorial/flaskr/templates/auth",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "login.html",
+                          "path": "examples/tutorial/flaskr/templates/auth/login.html",
+                          "extension": ".html"
+                        },
+                        {
+                          "type": "file",
+                          "name": "register.html",
+                          "path": "examples/tutorial/flaskr/templates/auth/register.html",
+                          "extension": ".html"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "base.html",
+                      "path": "examples/tutorial/flaskr/templates/base.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "blog",
+                      "path": "examples/tutorial/flaskr/templates/blog",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "create.html",
+                          "path": "examples/tutorial/flaskr/templates/blog/create.html",
+                          "extension": ".html"
+                        },
+                        {
+                          "type": "file",
+                          "name": "index.html",
+                          "path": "examples/tutorial/flaskr/templates/blog/index.html",
+                          "extension": ".html"
+                        },
+                        {
+                          "type": "file",
+                          "name": "update.html",
+                          "path": "examples/tutorial/flaskr/templates/blog/update.html",
+                          "extension": ".html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "pyproject.toml",
+              "path": "examples/tutorial/pyproject.toml",
+              "extension": ".toml"
+            },
+            {
+              "type": "directory",
+              "name": "tests",
+              "path": "examples/tutorial/tests",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "conftest.py",
+                  "path": "examples/tutorial/tests/conftest.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "data.sql",
+                  "path": "examples/tutorial/tests/data.sql",
+                  "extension": ".sql"
+                },
+                {
+                  "type": "file",
+                  "name": "test_auth.py",
+                  "path": "examples/tutorial/tests/test_auth.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "test_blog.py",
+                  "path": "examples/tutorial/tests/test_blog.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "test_db.py",
+                  "path": "examples/tutorial/tests/test_db.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "test_factory.py",
+                  "path": "examples/tutorial/tests/test_factory.py",
+                  "extension": ".py"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "examples/celery",
+      "path": "examples/celery",
+      "contents": [
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "examples/celery/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "make_celery.py",
+          "path": "examples/celery/make_celery.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "pyproject.toml",
+          "path": "examples/celery/pyproject.toml",
+          "extension": ".toml"
+        },
+        {
+          "type": "file",
+          "name": "requirements.txt",
+          "path": "examples/celery/requirements.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "directory",
+          "name": "src",
+          "path": "examples/celery/src",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "task_app",
+              "path": "examples/celery/src/task_app",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "examples/celery/src/task_app/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "tasks.py",
+                  "path": "examples/celery/src/task_app/tasks.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "templates",
+                  "path": "examples/celery/src/task_app/templates",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "index.html",
+                      "path": "examples/celery/src/task_app/templates/index.html",
+                      "extension": ".html"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "views.py",
+                  "path": "examples/celery/src/task_app/views.py",
+                  "extension": ".py"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/README.md",
+      "path": "examples/celery/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/make_celery.py",
+      "path": "examples/celery/make_celery.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/pyproject.toml",
+      "path": "examples/celery/pyproject.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/requirements.txt",
+      "path": "examples/celery/requirements.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "examples/celery/src",
+      "path": "examples/celery/src",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "task_app",
+          "path": "examples/celery/src/task_app",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "examples/celery/src/task_app/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "tasks.py",
+              "path": "examples/celery/src/task_app/tasks.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "path": "examples/celery/src/task_app/templates",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "index.html",
+                  "path": "examples/celery/src/task_app/templates/index.html",
+                  "extension": ".html"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "views.py",
+              "path": "examples/celery/src/task_app/views.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "examples/celery/src/task_app",
+      "path": "examples/celery/src/task_app",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "examples/celery/src/task_app/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "tasks.py",
+          "path": "examples/celery/src/task_app/tasks.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "examples/celery/src/task_app/templates",
+          "contents": [
+            {
+              "type": "file",
+              "name": "index.html",
+              "path": "examples/celery/src/task_app/templates/index.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "views.py",
+          "path": "examples/celery/src/task_app/views.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/src/task_app/__init__.py",
+      "path": "examples/celery/src/task_app/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/src/task_app/tasks.py",
+      "path": "examples/celery/src/task_app/tasks.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "examples/celery/src/task_app/templates",
+      "path": "examples/celery/src/task_app/templates",
+      "contents": [
+        {
+          "type": "file",
+          "name": "index.html",
+          "path": "examples/celery/src/task_app/templates/index.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/src/task_app/templates/index.html",
+      "path": "examples/celery/src/task_app/templates/index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/celery/src/task_app/views.py",
+      "path": "examples/celery/src/task_app/views.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "examples/javascript",
+      "path": "examples/javascript",
+      "contents": [
+        {
+          "type": "file",
+          "name": ".gitignore",
+          "path": "examples/javascript/.gitignore",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "LICENSE.rst",
+          "path": "examples/javascript/LICENSE.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "README.rst",
+          "path": "examples/javascript/README.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "directory",
+          "name": "js_example",
+          "path": "examples/javascript/js_example",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "examples/javascript/js_example/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "path": "examples/javascript/js_example/templates",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "base.html",
+                  "path": "examples/javascript/js_example/templates/base.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "fetch.html",
+                  "path": "examples/javascript/js_example/templates/fetch.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "jquery.html",
+                  "path": "examples/javascript/js_example/templates/jquery.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "xhr.html",
+                  "path": "examples/javascript/js_example/templates/xhr.html",
+                  "extension": ".html"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "views.py",
+              "path": "examples/javascript/js_example/views.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "pyproject.toml",
+          "path": "examples/javascript/pyproject.toml",
+          "extension": ".toml"
+        },
+        {
+          "type": "directory",
+          "name": "tests",
+          "path": "examples/javascript/tests",
+          "contents": [
+            {
+              "type": "file",
+              "name": "conftest.py",
+              "path": "examples/javascript/tests/conftest.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "test_js_example.py",
+              "path": "examples/javascript/tests/test_js_example.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/.gitignore",
+      "path": "examples/javascript/.gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/LICENSE.rst",
+      "path": "examples/javascript/LICENSE.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/README.rst",
+      "path": "examples/javascript/README.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "examples/javascript/js_example",
+      "path": "examples/javascript/js_example",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "examples/javascript/js_example/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "examples/javascript/js_example/templates",
+          "contents": [
+            {
+              "type": "file",
+              "name": "base.html",
+              "path": "examples/javascript/js_example/templates/base.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "fetch.html",
+              "path": "examples/javascript/js_example/templates/fetch.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "jquery.html",
+              "path": "examples/javascript/js_example/templates/jquery.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "xhr.html",
+              "path": "examples/javascript/js_example/templates/xhr.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "views.py",
+          "path": "examples/javascript/js_example/views.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/__init__.py",
+      "path": "examples/javascript/js_example/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "examples/javascript/js_example/templates",
+      "path": "examples/javascript/js_example/templates",
+      "contents": [
+        {
+          "type": "file",
+          "name": "base.html",
+          "path": "examples/javascript/js_example/templates/base.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "fetch.html",
+          "path": "examples/javascript/js_example/templates/fetch.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "jquery.html",
+          "path": "examples/javascript/js_example/templates/jquery.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "xhr.html",
+          "path": "examples/javascript/js_example/templates/xhr.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/templates/base.html",
+      "path": "examples/javascript/js_example/templates/base.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/templates/fetch.html",
+      "path": "examples/javascript/js_example/templates/fetch.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/templates/jquery.html",
+      "path": "examples/javascript/js_example/templates/jquery.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/templates/xhr.html",
+      "path": "examples/javascript/js_example/templates/xhr.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/js_example/views.py",
+      "path": "examples/javascript/js_example/views.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/pyproject.toml",
+      "path": "examples/javascript/pyproject.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "directory",
+      "name": "examples/javascript/tests",
+      "path": "examples/javascript/tests",
+      "contents": [
+        {
+          "type": "file",
+          "name": "conftest.py",
+          "path": "examples/javascript/tests/conftest.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_js_example.py",
+          "path": "examples/javascript/tests/test_js_example.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/tests/conftest.py",
+      "path": "examples/javascript/tests/conftest.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/javascript/tests/test_js_example.py",
+      "path": "examples/javascript/tests/test_js_example.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial",
+      "path": "examples/tutorial",
+      "contents": [
+        {
+          "type": "file",
+          "name": ".gitignore",
+          "path": "examples/tutorial/.gitignore",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "LICENSE.rst",
+          "path": "examples/tutorial/LICENSE.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "README.rst",
+          "path": "examples/tutorial/README.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "directory",
+          "name": "flaskr",
+          "path": "examples/tutorial/flaskr",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "examples/tutorial/flaskr/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "auth.py",
+              "path": "examples/tutorial/flaskr/auth.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "blog.py",
+              "path": "examples/tutorial/flaskr/blog.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "db.py",
+              "path": "examples/tutorial/flaskr/db.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "schema.sql",
+              "path": "examples/tutorial/flaskr/schema.sql",
+              "extension": ".sql"
+            },
+            {
+              "type": "directory",
+              "name": "static",
+              "path": "examples/tutorial/flaskr/static",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "style.css",
+                  "path": "examples/tutorial/flaskr/static/style.css",
+                  "extension": ".css"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "path": "examples/tutorial/flaskr/templates",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "auth",
+                  "path": "examples/tutorial/flaskr/templates/auth",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "login.html",
+                      "path": "examples/tutorial/flaskr/templates/auth/login.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "register.html",
+                      "path": "examples/tutorial/flaskr/templates/auth/register.html",
+                      "extension": ".html"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "base.html",
+                  "path": "examples/tutorial/flaskr/templates/base.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "directory",
+                  "name": "blog",
+                  "path": "examples/tutorial/flaskr/templates/blog",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "create.html",
+                      "path": "examples/tutorial/flaskr/templates/blog/create.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "index.html",
+                      "path": "examples/tutorial/flaskr/templates/blog/index.html",
+                      "extension": ".html"
+                    },
+                    {
+                      "type": "file",
+                      "name": "update.html",
+                      "path": "examples/tutorial/flaskr/templates/blog/update.html",
+                      "extension": ".html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "pyproject.toml",
+          "path": "examples/tutorial/pyproject.toml",
+          "extension": ".toml"
+        },
+        {
+          "type": "directory",
+          "name": "tests",
+          "path": "examples/tutorial/tests",
+          "contents": [
+            {
+              "type": "file",
+              "name": "conftest.py",
+              "path": "examples/tutorial/tests/conftest.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "data.sql",
+              "path": "examples/tutorial/tests/data.sql",
+              "extension": ".sql"
+            },
+            {
+              "type": "file",
+              "name": "test_auth.py",
+              "path": "examples/tutorial/tests/test_auth.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "test_blog.py",
+              "path": "examples/tutorial/tests/test_blog.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "test_db.py",
+              "path": "examples/tutorial/tests/test_db.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "test_factory.py",
+              "path": "examples/tutorial/tests/test_factory.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/.gitignore",
+      "path": "examples/tutorial/.gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/LICENSE.rst",
+      "path": "examples/tutorial/LICENSE.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/README.rst",
+      "path": "examples/tutorial/README.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/flaskr",
+      "path": "examples/tutorial/flaskr",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "examples/tutorial/flaskr/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "auth.py",
+          "path": "examples/tutorial/flaskr/auth.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "blog.py",
+          "path": "examples/tutorial/flaskr/blog.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "db.py",
+          "path": "examples/tutorial/flaskr/db.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "schema.sql",
+          "path": "examples/tutorial/flaskr/schema.sql",
+          "extension": ".sql"
+        },
+        {
+          "type": "directory",
+          "name": "static",
+          "path": "examples/tutorial/flaskr/static",
+          "contents": [
+            {
+              "type": "file",
+              "name": "style.css",
+              "path": "examples/tutorial/flaskr/static/style.css",
+              "extension": ".css"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "examples/tutorial/flaskr/templates",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "auth",
+              "path": "examples/tutorial/flaskr/templates/auth",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "login.html",
+                  "path": "examples/tutorial/flaskr/templates/auth/login.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "register.html",
+                  "path": "examples/tutorial/flaskr/templates/auth/register.html",
+                  "extension": ".html"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "base.html",
+              "path": "examples/tutorial/flaskr/templates/base.html",
+              "extension": ".html"
+            },
+            {
+              "type": "directory",
+              "name": "blog",
+              "path": "examples/tutorial/flaskr/templates/blog",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "create.html",
+                  "path": "examples/tutorial/flaskr/templates/blog/create.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "index.html",
+                  "path": "examples/tutorial/flaskr/templates/blog/index.html",
+                  "extension": ".html"
+                },
+                {
+                  "type": "file",
+                  "name": "update.html",
+                  "path": "examples/tutorial/flaskr/templates/blog/update.html",
+                  "extension": ".html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/__init__.py",
+      "path": "examples/tutorial/flaskr/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/auth.py",
+      "path": "examples/tutorial/flaskr/auth.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/blog.py",
+      "path": "examples/tutorial/flaskr/blog.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/db.py",
+      "path": "examples/tutorial/flaskr/db.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/schema.sql",
+      "path": "examples/tutorial/flaskr/schema.sql",
+      "extension": ".sql"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/flaskr/static",
+      "path": "examples/tutorial/flaskr/static",
+      "contents": [
+        {
+          "type": "file",
+          "name": "style.css",
+          "path": "examples/tutorial/flaskr/static/style.css",
+          "extension": ".css"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/static/style.css",
+      "path": "examples/tutorial/flaskr/static/style.css",
+      "extension": ".css"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/flaskr/templates",
+      "path": "examples/tutorial/flaskr/templates",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "auth",
+          "path": "examples/tutorial/flaskr/templates/auth",
+          "contents": [
+            {
+              "type": "file",
+              "name": "login.html",
+              "path": "examples/tutorial/flaskr/templates/auth/login.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "register.html",
+              "path": "examples/tutorial/flaskr/templates/auth/register.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "base.html",
+          "path": "examples/tutorial/flaskr/templates/base.html",
+          "extension": ".html"
+        },
+        {
+          "type": "directory",
+          "name": "blog",
+          "path": "examples/tutorial/flaskr/templates/blog",
+          "contents": [
+            {
+              "type": "file",
+              "name": "create.html",
+              "path": "examples/tutorial/flaskr/templates/blog/create.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "index.html",
+              "path": "examples/tutorial/flaskr/templates/blog/index.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "update.html",
+              "path": "examples/tutorial/flaskr/templates/blog/update.html",
+              "extension": ".html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/flaskr/templates/auth",
+      "path": "examples/tutorial/flaskr/templates/auth",
+      "contents": [
+        {
+          "type": "file",
+          "name": "login.html",
+          "path": "examples/tutorial/flaskr/templates/auth/login.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "register.html",
+          "path": "examples/tutorial/flaskr/templates/auth/register.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/auth/login.html",
+      "path": "examples/tutorial/flaskr/templates/auth/login.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/auth/register.html",
+      "path": "examples/tutorial/flaskr/templates/auth/register.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/base.html",
+      "path": "examples/tutorial/flaskr/templates/base.html",
+      "extension": ".html"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/flaskr/templates/blog",
+      "path": "examples/tutorial/flaskr/templates/blog",
+      "contents": [
+        {
+          "type": "file",
+          "name": "create.html",
+          "path": "examples/tutorial/flaskr/templates/blog/create.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "index.html",
+          "path": "examples/tutorial/flaskr/templates/blog/index.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "update.html",
+          "path": "examples/tutorial/flaskr/templates/blog/update.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/blog/create.html",
+      "path": "examples/tutorial/flaskr/templates/blog/create.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/blog/index.html",
+      "path": "examples/tutorial/flaskr/templates/blog/index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/flaskr/templates/blog/update.html",
+      "path": "examples/tutorial/flaskr/templates/blog/update.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/pyproject.toml",
+      "path": "examples/tutorial/pyproject.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "directory",
+      "name": "examples/tutorial/tests",
+      "path": "examples/tutorial/tests",
+      "contents": [
+        {
+          "type": "file",
+          "name": "conftest.py",
+          "path": "examples/tutorial/tests/conftest.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "data.sql",
+          "path": "examples/tutorial/tests/data.sql",
+          "extension": ".sql"
+        },
+        {
+          "type": "file",
+          "name": "test_auth.py",
+          "path": "examples/tutorial/tests/test_auth.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_blog.py",
+          "path": "examples/tutorial/tests/test_blog.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_db.py",
+          "path": "examples/tutorial/tests/test_db.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_factory.py",
+          "path": "examples/tutorial/tests/test_factory.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/conftest.py",
+      "path": "examples/tutorial/tests/conftest.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/data.sql",
+      "path": "examples/tutorial/tests/data.sql",
+      "extension": ".sql"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/test_auth.py",
+      "path": "examples/tutorial/tests/test_auth.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/test_blog.py",
+      "path": "examples/tutorial/tests/test_blog.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/test_db.py",
+      "path": "examples/tutorial/tests/test_db.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "examples/tutorial/tests/test_factory.py",
+      "path": "examples/tutorial/tests/test_factory.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "pyproject.toml",
+      "path": "pyproject.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "directory",
+      "name": "requirements-skip",
+      "path": "requirements-skip",
+      "contents": [
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "requirements-skip/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "tests-dev.txt",
+          "path": "requirements-skip/tests-dev.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "tests-min.in",
+          "path": "requirements-skip/tests-min.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "tests-min.txt",
+          "path": "requirements-skip/tests-min.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "requirements-skip/README.md",
+      "path": "requirements-skip/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "requirements-skip/tests-dev.txt",
+      "path": "requirements-skip/tests-dev.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "requirements-skip/tests-min.in",
+      "path": "requirements-skip/tests-min.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements-skip/tests-min.txt",
+      "path": "requirements-skip/tests-min.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "requirements",
+      "path": "requirements",
+      "contents": [
+        {
+          "type": "file",
+          "name": "build.in",
+          "path": "requirements/build.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "build.txt",
+          "path": "requirements/build.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "dev.in",
+          "path": "requirements/dev.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "dev.txt",
+          "path": "requirements/dev.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "docs.in",
+          "path": "requirements/docs.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "docs.txt",
+          "path": "requirements/docs.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "tests.in",
+          "path": "requirements/tests.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "tests.txt",
+          "path": "requirements/tests.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "typing.in",
+          "path": "requirements/typing.in",
+          "extension": ".in"
+        },
+        {
+          "type": "file",
+          "name": "typing.txt",
+          "path": "requirements/typing.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "requirements/build.in",
+      "path": "requirements/build.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements/build.txt",
+      "path": "requirements/build.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "requirements/dev.in",
+      "path": "requirements/dev.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements/dev.txt",
+      "path": "requirements/dev.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "requirements/docs.in",
+      "path": "requirements/docs.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements/docs.txt",
+      "path": "requirements/docs.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "requirements/tests.in",
+      "path": "requirements/tests.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements/tests.txt",
+      "path": "requirements/tests.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "requirements/typing.in",
+      "path": "requirements/typing.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "requirements/typing.txt",
+      "path": "requirements/typing.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "src",
+      "path": "src",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "flask",
+          "path": "src/flask",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "src/flask/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "__main__.py",
+              "path": "src/flask/__main__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "app.py",
+              "path": "src/flask/app.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "blueprints.py",
+              "path": "src/flask/blueprints.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "cli.py",
+              "path": "src/flask/cli.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "config.py",
+              "path": "src/flask/config.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "ctx.py",
+              "path": "src/flask/ctx.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "debughelpers.py",
+              "path": "src/flask/debughelpers.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "globals.py",
+              "path": "src/flask/globals.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "helpers.py",
+              "path": "src/flask/helpers.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "json",
+              "path": "src/flask/json",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "src/flask/json/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "provider.py",
+                  "path": "src/flask/json/provider.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "tag.py",
+                  "path": "src/flask/json/tag.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "logging.py",
+              "path": "src/flask/logging.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "py.typed",
+              "path": "src/flask/py.typed",
+              "extension": ".typed"
+            },
+            {
+              "type": "directory",
+              "name": "sansio",
+              "path": "src/flask/sansio",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "src/flask/sansio/README.md",
+                  "extension": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "app.py",
+                  "path": "src/flask/sansio/app.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "blueprints.py",
+                  "path": "src/flask/sansio/blueprints.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "scaffold.py",
+                  "path": "src/flask/sansio/scaffold.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "sessions.py",
+              "path": "src/flask/sessions.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "signals.py",
+              "path": "src/flask/signals.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "templating.py",
+              "path": "src/flask/templating.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "testing.py",
+              "path": "src/flask/testing.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "typing.py",
+              "path": "src/flask/typing.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "views.py",
+              "path": "src/flask/views.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "wrappers.py",
+              "path": "src/flask/wrappers.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "src/flask",
+      "path": "src/flask",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "src/flask/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "__main__.py",
+          "path": "src/flask/__main__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "app.py",
+          "path": "src/flask/app.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "blueprints.py",
+          "path": "src/flask/blueprints.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "cli.py",
+          "path": "src/flask/cli.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "config.py",
+          "path": "src/flask/config.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "ctx.py",
+          "path": "src/flask/ctx.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "debughelpers.py",
+          "path": "src/flask/debughelpers.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "globals.py",
+          "path": "src/flask/globals.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "helpers.py",
+          "path": "src/flask/helpers.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "json",
+          "path": "src/flask/json",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "src/flask/json/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "provider.py",
+              "path": "src/flask/json/provider.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "tag.py",
+              "path": "src/flask/json/tag.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "logging.py",
+          "path": "src/flask/logging.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "py.typed",
+          "path": "src/flask/py.typed",
+          "extension": ".typed"
+        },
+        {
+          "type": "directory",
+          "name": "sansio",
+          "path": "src/flask/sansio",
+          "contents": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "path": "src/flask/sansio/README.md",
+              "extension": ".md"
+            },
+            {
+              "type": "file",
+              "name": "app.py",
+              "path": "src/flask/sansio/app.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "blueprints.py",
+              "path": "src/flask/sansio/blueprints.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "scaffold.py",
+              "path": "src/flask/sansio/scaffold.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "sessions.py",
+          "path": "src/flask/sessions.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "signals.py",
+          "path": "src/flask/signals.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "templating.py",
+          "path": "src/flask/templating.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "testing.py",
+          "path": "src/flask/testing.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "typing.py",
+          "path": "src/flask/typing.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "views.py",
+          "path": "src/flask/views.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "wrappers.py",
+          "path": "src/flask/wrappers.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "src/flask/__init__.py",
+      "path": "src/flask/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/__main__.py",
+      "path": "src/flask/__main__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/app.py",
+      "path": "src/flask/app.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/blueprints.py",
+      "path": "src/flask/blueprints.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/cli.py",
+      "path": "src/flask/cli.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/config.py",
+      "path": "src/flask/config.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/ctx.py",
+      "path": "src/flask/ctx.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/debughelpers.py",
+      "path": "src/flask/debughelpers.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/globals.py",
+      "path": "src/flask/globals.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/helpers.py",
+      "path": "src/flask/helpers.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "src/flask/json",
+      "path": "src/flask/json",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "src/flask/json/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "provider.py",
+          "path": "src/flask/json/provider.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "tag.py",
+          "path": "src/flask/json/tag.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "src/flask/json/__init__.py",
+      "path": "src/flask/json/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/json/provider.py",
+      "path": "src/flask/json/provider.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/json/tag.py",
+      "path": "src/flask/json/tag.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/logging.py",
+      "path": "src/flask/logging.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/py.typed",
+      "path": "src/flask/py.typed",
+      "extension": ".typed"
+    },
+    {
+      "type": "directory",
+      "name": "src/flask/sansio",
+      "path": "src/flask/sansio",
+      "contents": [
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "src/flask/sansio/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "app.py",
+          "path": "src/flask/sansio/app.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "blueprints.py",
+          "path": "src/flask/sansio/blueprints.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "scaffold.py",
+          "path": "src/flask/sansio/scaffold.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "src/flask/sansio/README.md",
+      "path": "src/flask/sansio/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/sansio/app.py",
+      "path": "src/flask/sansio/app.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/sansio/blueprints.py",
+      "path": "src/flask/sansio/blueprints.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/sansio/scaffold.py",
+      "path": "src/flask/sansio/scaffold.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/sessions.py",
+      "path": "src/flask/sessions.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/signals.py",
+      "path": "src/flask/signals.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/templating.py",
+      "path": "src/flask/templating.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/testing.py",
+      "path": "src/flask/testing.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/typing.py",
+      "path": "src/flask/typing.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/views.py",
+      "path": "src/flask/views.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/flask/wrappers.py",
+      "path": "src/flask/wrappers.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests",
+      "path": "tests",
+      "contents": [
+        {
+          "type": "file",
+          "name": "conftest.py",
+          "path": "tests/conftest.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "static",
+          "path": "tests/static",
+          "contents": [
+            {
+              "type": "file",
+              "name": "config.json",
+              "path": "tests/static/config.json",
+              "extension": ".json"
+            },
+            {
+              "type": "file",
+              "name": "config.toml",
+              "path": "tests/static/config.toml",
+              "extension": ".toml"
+            },
+            {
+              "type": "file",
+              "name": "index.html",
+              "path": "tests/static/index.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "tests/templates",
+          "contents": [
+            {
+              "type": "file",
+              "name": "_macro.html",
+              "path": "tests/templates/_macro.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "context_template.html",
+              "path": "tests/templates/context_template.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "escaping_template.html",
+              "path": "tests/templates/escaping_template.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "mail.txt",
+              "path": "tests/templates/mail.txt",
+              "extension": ".txt"
+            },
+            {
+              "type": "directory",
+              "name": "nested",
+              "path": "tests/templates/nested",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "nested.txt",
+                  "path": "tests/templates/nested/nested.txt",
+                  "extension": ".txt"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "non_escaping_template.txt",
+              "path": "tests/templates/non_escaping_template.txt",
+              "extension": ".txt"
+            },
+            {
+              "type": "file",
+              "name": "simple_template.html",
+              "path": "tests/templates/simple_template.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "template_filter.html",
+              "path": "tests/templates/template_filter.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "template_test.html",
+              "path": "tests/templates/template_test.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "test_appctx.py",
+          "path": "tests/test_appctx.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "test_apps",
+          "path": "tests/test_apps",
+          "contents": [
+            {
+              "type": "file",
+              "name": ".env",
+              "path": "tests/test_apps/.env",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": ".flaskenv",
+              "path": "tests/test_apps/.flaskenv",
+              "extension": "no_extension"
+            },
+            {
+              "type": "directory",
+              "name": "blueprintapp",
+              "path": "tests/test_apps/blueprintapp",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/blueprintapp/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "apps",
+                  "path": "tests/test_apps/blueprintapp/apps",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "tests/test_apps/blueprintapp/apps/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "admin",
+                      "path": "tests/test_apps/blueprintapp/apps/admin",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "__init__.py",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+                          "extension": ".py"
+                        },
+                        {
+                          "type": "directory",
+                          "name": "static",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/static",
+                          "contents": [
+                            {
+                              "type": "directory",
+                              "name": "css",
+                              "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+                              "contents": [
+                                {
+                                  "type": "file",
+                                  "name": "test.css",
+                                  "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+                                  "extension": ".css"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "file",
+                              "name": "test.txt",
+                              "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+                              "extension": ".txt"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "directory",
+                          "name": "templates",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+                          "contents": [
+                            {
+                              "type": "directory",
+                              "name": "admin",
+                              "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+                              "contents": [
+                                {
+                                  "type": "file",
+                                  "name": "index.html",
+                                  "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+                                  "extension": ".html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "directory",
+                      "name": "frontend",
+                      "path": "tests/test_apps/blueprintapp/apps/frontend",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "__init__.py",
+                          "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+                          "extension": ".py"
+                        },
+                        {
+                          "type": "directory",
+                          "name": "templates",
+                          "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+                          "contents": [
+                            {
+                              "type": "directory",
+                              "name": "frontend",
+                              "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+                              "contents": [
+                                {
+                                  "type": "file",
+                                  "name": "index.html",
+                                  "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+                                  "extension": ".html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "cliapp",
+              "path": "tests/test_apps/cliapp",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/cliapp/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "app.py",
+                  "path": "tests/test_apps/cliapp/app.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "factory.py",
+                  "path": "tests/test_apps/cliapp/factory.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "importerrorapp.py",
+                  "path": "tests/test_apps/cliapp/importerrorapp.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "inner1",
+                  "path": "tests/test_apps/cliapp/inner1",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "tests/test_apps/cliapp/inner1/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "inner2",
+                      "path": "tests/test_apps/cliapp/inner1/inner2",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "__init__.py",
+                          "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+                          "extension": ".py"
+                        },
+                        {
+                          "type": "file",
+                          "name": "flask.py",
+                          "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+                          "extension": ".py"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "message.txt",
+                  "path": "tests/test_apps/cliapp/message.txt",
+                  "extension": ".txt"
+                },
+                {
+                  "type": "file",
+                  "name": "multiapp.py",
+                  "path": "tests/test_apps/cliapp/multiapp.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "helloworld",
+              "path": "tests/test_apps/helloworld",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "hello.py",
+                  "path": "tests/test_apps/helloworld/hello.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "wsgi.py",
+                  "path": "tests/test_apps/helloworld/wsgi.py",
+                  "extension": ".py"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "subdomaintestmodule",
+              "path": "tests/test_apps/subdomaintestmodule",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/subdomaintestmodule/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "static",
+                  "path": "tests/test_apps/subdomaintestmodule/static",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "hello.txt",
+                      "path": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+                      "extension": ".txt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "test_async.py",
+          "path": "tests/test_async.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_basic.py",
+          "path": "tests/test_basic.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_blueprints.py",
+          "path": "tests/test_blueprints.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_cli.py",
+          "path": "tests/test_cli.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_config.py",
+          "path": "tests/test_config.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_converters.py",
+          "path": "tests/test_converters.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_helpers.py",
+          "path": "tests/test_helpers.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_instance_config.py",
+          "path": "tests/test_instance_config.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_json.py",
+          "path": "tests/test_json.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_json_tag.py",
+          "path": "tests/test_json_tag.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_logging.py",
+          "path": "tests/test_logging.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_regression.py",
+          "path": "tests/test_regression.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_reqctx.py",
+          "path": "tests/test_reqctx.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_session_interface.py",
+          "path": "tests/test_session_interface.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_signals.py",
+          "path": "tests/test_signals.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_subclassing.py",
+          "path": "tests/test_subclassing.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_templating.py",
+          "path": "tests/test_templating.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_testing.py",
+          "path": "tests/test_testing.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_user_error_handler.py",
+          "path": "tests/test_user_error_handler.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_views.py",
+          "path": "tests/test_views.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "typing",
+          "path": "tests/typing",
+          "contents": [
+            {
+              "type": "file",
+              "name": "typing_app_decorators.py",
+              "path": "tests/typing/typing_app_decorators.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "typing_error_handler.py",
+              "path": "tests/typing/typing_error_handler.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "typing_route.py",
+              "path": "tests/typing/typing_route.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/conftest.py",
+      "path": "tests/conftest.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/static",
+      "path": "tests/static",
+      "contents": [
+        {
+          "type": "file",
+          "name": "config.json",
+          "path": "tests/static/config.json",
+          "extension": ".json"
+        },
+        {
+          "type": "file",
+          "name": "config.toml",
+          "path": "tests/static/config.toml",
+          "extension": ".toml"
+        },
+        {
+          "type": "file",
+          "name": "index.html",
+          "path": "tests/static/index.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/static/config.json",
+      "path": "tests/static/config.json",
+      "extension": ".json"
+    },
+    {
+      "type": "file",
+      "name": "tests/static/config.toml",
+      "path": "tests/static/config.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "file",
+      "name": "tests/static/index.html",
+      "path": "tests/static/index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "directory",
+      "name": "tests/templates",
+      "path": "tests/templates",
+      "contents": [
+        {
+          "type": "file",
+          "name": "_macro.html",
+          "path": "tests/templates/_macro.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "context_template.html",
+          "path": "tests/templates/context_template.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "escaping_template.html",
+          "path": "tests/templates/escaping_template.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "mail.txt",
+          "path": "tests/templates/mail.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "directory",
+          "name": "nested",
+          "path": "tests/templates/nested",
+          "contents": [
+            {
+              "type": "file",
+              "name": "nested.txt",
+              "path": "tests/templates/nested/nested.txt",
+              "extension": ".txt"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "non_escaping_template.txt",
+          "path": "tests/templates/non_escaping_template.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "simple_template.html",
+          "path": "tests/templates/simple_template.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "template_filter.html",
+          "path": "tests/templates/template_filter.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "template_test.html",
+          "path": "tests/templates/template_test.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/_macro.html",
+      "path": "tests/templates/_macro.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/context_template.html",
+      "path": "tests/templates/context_template.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/escaping_template.html",
+      "path": "tests/templates/escaping_template.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/mail.txt",
+      "path": "tests/templates/mail.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "tests/templates/nested",
+      "path": "tests/templates/nested",
+      "contents": [
+        {
+          "type": "file",
+          "name": "nested.txt",
+          "path": "tests/templates/nested/nested.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/nested/nested.txt",
+      "path": "tests/templates/nested/nested.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/non_escaping_template.txt",
+      "path": "tests/templates/non_escaping_template.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/simple_template.html",
+      "path": "tests/templates/simple_template.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/template_filter.html",
+      "path": "tests/templates/template_filter.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/templates/template_test.html",
+      "path": "tests/templates/template_test.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_appctx.py",
+      "path": "tests/test_appctx.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps",
+      "path": "tests/test_apps",
+      "contents": [
+        {
+          "type": "file",
+          "name": ".env",
+          "path": "tests/test_apps/.env",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": ".flaskenv",
+          "path": "tests/test_apps/.flaskenv",
+          "extension": "no_extension"
+        },
+        {
+          "type": "directory",
+          "name": "blueprintapp",
+          "path": "tests/test_apps/blueprintapp",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/blueprintapp/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "apps",
+              "path": "tests/test_apps/blueprintapp/apps",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/blueprintapp/apps/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "admin",
+                  "path": "tests/test_apps/blueprintapp/apps/admin",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "static",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/static",
+                      "contents": [
+                        {
+                          "type": "directory",
+                          "name": "css",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+                          "contents": [
+                            {
+                              "type": "file",
+                              "name": "test.css",
+                              "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+                              "extension": ".css"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "test.txt",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+                          "extension": ".txt"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "directory",
+                      "name": "templates",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+                      "contents": [
+                        {
+                          "type": "directory",
+                          "name": "admin",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+                          "contents": [
+                            {
+                              "type": "file",
+                              "name": "index.html",
+                              "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+                              "extension": ".html"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "directory",
+                  "name": "frontend",
+                  "path": "tests/test_apps/blueprintapp/apps/frontend",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "directory",
+                      "name": "templates",
+                      "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+                      "contents": [
+                        {
+                          "type": "directory",
+                          "name": "frontend",
+                          "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+                          "contents": [
+                            {
+                              "type": "file",
+                              "name": "index.html",
+                              "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+                              "extension": ".html"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "cliapp",
+          "path": "tests/test_apps/cliapp",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/cliapp/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "app.py",
+              "path": "tests/test_apps/cliapp/app.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "factory.py",
+              "path": "tests/test_apps/cliapp/factory.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "importerrorapp.py",
+              "path": "tests/test_apps/cliapp/importerrorapp.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "inner1",
+              "path": "tests/test_apps/cliapp/inner1",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/cliapp/inner1/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "inner2",
+                  "path": "tests/test_apps/cliapp/inner1/inner2",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+                      "extension": ".py"
+                    },
+                    {
+                      "type": "file",
+                      "name": "flask.py",
+                      "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+                      "extension": ".py"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "message.txt",
+              "path": "tests/test_apps/cliapp/message.txt",
+              "extension": ".txt"
+            },
+            {
+              "type": "file",
+              "name": "multiapp.py",
+              "path": "tests/test_apps/cliapp/multiapp.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "helloworld",
+          "path": "tests/test_apps/helloworld",
+          "contents": [
+            {
+              "type": "file",
+              "name": "hello.py",
+              "path": "tests/test_apps/helloworld/hello.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "wsgi.py",
+              "path": "tests/test_apps/helloworld/wsgi.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "subdomaintestmodule",
+          "path": "tests/test_apps/subdomaintestmodule",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/subdomaintestmodule/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "static",
+              "path": "tests/test_apps/subdomaintestmodule/static",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "hello.txt",
+                  "path": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+                  "extension": ".txt"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/.env",
+      "path": "tests/test_apps/.env",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/.flaskenv",
+      "path": "tests/test_apps/.flaskenv",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp",
+      "path": "tests/test_apps/blueprintapp",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/blueprintapp/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "apps",
+          "path": "tests/test_apps/blueprintapp/apps",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/blueprintapp/apps/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "admin",
+              "path": "tests/test_apps/blueprintapp/apps/admin",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "static",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/static",
+                  "contents": [
+                    {
+                      "type": "directory",
+                      "name": "css",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "test.css",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+                          "extension": ".css"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "test.txt",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+                      "extension": ".txt"
+                    }
+                  ]
+                },
+                {
+                  "type": "directory",
+                  "name": "templates",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+                  "contents": [
+                    {
+                      "type": "directory",
+                      "name": "admin",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "index.html",
+                          "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+                          "extension": ".html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "frontend",
+              "path": "tests/test_apps/blueprintapp/apps/frontend",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "directory",
+                  "name": "templates",
+                  "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+                  "contents": [
+                    {
+                      "type": "directory",
+                      "name": "frontend",
+                      "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+                      "contents": [
+                        {
+                          "type": "file",
+                          "name": "index.html",
+                          "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+                          "extension": ".html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/__init__.py",
+      "path": "tests/test_apps/blueprintapp/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps",
+      "path": "tests/test_apps/blueprintapp/apps",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/blueprintapp/apps/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "admin",
+          "path": "tests/test_apps/blueprintapp/apps/admin",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "static",
+              "path": "tests/test_apps/blueprintapp/apps/admin/static",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "css",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "test.css",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+                      "extension": ".css"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "test.txt",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+                  "extension": ".txt"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "admin",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "index.html",
+                      "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+                      "extension": ".html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "frontend",
+          "path": "tests/test_apps/blueprintapp/apps/frontend",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+              "contents": [
+                {
+                  "type": "directory",
+                  "name": "frontend",
+                  "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "index.html",
+                      "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+                      "extension": ".html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/__init__.py",
+      "path": "tests/test_apps/blueprintapp/apps/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/admin",
+      "path": "tests/test_apps/blueprintapp/apps/admin",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "static",
+          "path": "tests/test_apps/blueprintapp/apps/admin/static",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "css",
+              "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "test.css",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+                  "extension": ".css"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "test.txt",
+              "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+              "extension": ".txt"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "admin",
+              "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "index.html",
+                  "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+                  "extension": ".html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+      "path": "tests/test_apps/blueprintapp/apps/admin/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/admin/static",
+      "path": "tests/test_apps/blueprintapp/apps/admin/static",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "css",
+          "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+          "contents": [
+            {
+              "type": "file",
+              "name": "test.css",
+              "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+              "extension": ".css"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "test.txt",
+          "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/admin/static/css",
+      "path": "tests/test_apps/blueprintapp/apps/admin/static/css",
+      "contents": [
+        {
+          "type": "file",
+          "name": "test.css",
+          "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+          "extension": ".css"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+      "path": "tests/test_apps/blueprintapp/apps/admin/static/css/test.css",
+      "extension": ".css"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+      "path": "tests/test_apps/blueprintapp/apps/admin/static/test.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/admin/templates",
+      "path": "tests/test_apps/blueprintapp/apps/admin/templates",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "admin",
+          "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+          "contents": [
+            {
+              "type": "file",
+              "name": "index.html",
+              "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+              "extension": ".html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+      "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin",
+      "contents": [
+        {
+          "type": "file",
+          "name": "index.html",
+          "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+      "path": "tests/test_apps/blueprintapp/apps/admin/templates/admin/index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/frontend",
+      "path": "tests/test_apps/blueprintapp/apps/frontend",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "templates",
+          "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+          "contents": [
+            {
+              "type": "directory",
+              "name": "frontend",
+              "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "index.html",
+                  "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+                  "extension": ".html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+      "path": "tests/test_apps/blueprintapp/apps/frontend/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/frontend/templates",
+      "path": "tests/test_apps/blueprintapp/apps/frontend/templates",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "frontend",
+          "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+          "contents": [
+            {
+              "type": "file",
+              "name": "index.html",
+              "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+              "extension": ".html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+      "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend",
+      "contents": [
+        {
+          "type": "file",
+          "name": "index.html",
+          "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+      "path": "tests/test_apps/blueprintapp/apps/frontend/templates/frontend/index.html",
+      "extension": ".html"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/cliapp",
+      "path": "tests/test_apps/cliapp",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/cliapp/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "app.py",
+          "path": "tests/test_apps/cliapp/app.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "factory.py",
+          "path": "tests/test_apps/cliapp/factory.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "importerrorapp.py",
+          "path": "tests/test_apps/cliapp/importerrorapp.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "inner1",
+          "path": "tests/test_apps/cliapp/inner1",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/cliapp/inner1/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "directory",
+              "name": "inner2",
+              "path": "tests/test_apps/cliapp/inner1/inner2",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "__init__.py",
+                  "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+                  "extension": ".py"
+                },
+                {
+                  "type": "file",
+                  "name": "flask.py",
+                  "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+                  "extension": ".py"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "message.txt",
+          "path": "tests/test_apps/cliapp/message.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "file",
+          "name": "multiapp.py",
+          "path": "tests/test_apps/cliapp/multiapp.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/__init__.py",
+      "path": "tests/test_apps/cliapp/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/app.py",
+      "path": "tests/test_apps/cliapp/app.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/factory.py",
+      "path": "tests/test_apps/cliapp/factory.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/importerrorapp.py",
+      "path": "tests/test_apps/cliapp/importerrorapp.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/cliapp/inner1",
+      "path": "tests/test_apps/cliapp/inner1",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/cliapp/inner1/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "inner2",
+          "path": "tests/test_apps/cliapp/inner1/inner2",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "flask.py",
+              "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/inner1/__init__.py",
+      "path": "tests/test_apps/cliapp/inner1/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/cliapp/inner1/inner2",
+      "path": "tests/test_apps/cliapp/inner1/inner2",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "flask.py",
+          "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+      "path": "tests/test_apps/cliapp/inner1/inner2/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+      "path": "tests/test_apps/cliapp/inner1/inner2/flask.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/message.txt",
+      "path": "tests/test_apps/cliapp/message.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/cliapp/multiapp.py",
+      "path": "tests/test_apps/cliapp/multiapp.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/helloworld",
+      "path": "tests/test_apps/helloworld",
+      "contents": [
+        {
+          "type": "file",
+          "name": "hello.py",
+          "path": "tests/test_apps/helloworld/hello.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "wsgi.py",
+          "path": "tests/test_apps/helloworld/wsgi.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/helloworld/hello.py",
+      "path": "tests/test_apps/helloworld/hello.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/helloworld/wsgi.py",
+      "path": "tests/test_apps/helloworld/wsgi.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/subdomaintestmodule",
+      "path": "tests/test_apps/subdomaintestmodule",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/test_apps/subdomaintestmodule/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "static",
+          "path": "tests/test_apps/subdomaintestmodule/static",
+          "contents": [
+            {
+              "type": "file",
+              "name": "hello.txt",
+              "path": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+              "extension": ".txt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/subdomaintestmodule/__init__.py",
+      "path": "tests/test_apps/subdomaintestmodule/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/test_apps/subdomaintestmodule/static",
+      "path": "tests/test_apps/subdomaintestmodule/static",
+      "contents": [
+        {
+          "type": "file",
+          "name": "hello.txt",
+          "path": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+          "extension": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+      "path": "tests/test_apps/subdomaintestmodule/static/hello.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_async.py",
+      "path": "tests/test_async.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_basic.py",
+      "path": "tests/test_basic.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_blueprints.py",
+      "path": "tests/test_blueprints.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_cli.py",
+      "path": "tests/test_cli.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_config.py",
+      "path": "tests/test_config.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_converters.py",
+      "path": "tests/test_converters.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_helpers.py",
+      "path": "tests/test_helpers.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_instance_config.py",
+      "path": "tests/test_instance_config.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_json.py",
+      "path": "tests/test_json.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_json_tag.py",
+      "path": "tests/test_json_tag.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_logging.py",
+      "path": "tests/test_logging.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_regression.py",
+      "path": "tests/test_regression.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_reqctx.py",
+      "path": "tests/test_reqctx.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_session_interface.py",
+      "path": "tests/test_session_interface.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_signals.py",
+      "path": "tests/test_signals.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_subclassing.py",
+      "path": "tests/test_subclassing.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_templating.py",
+      "path": "tests/test_templating.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_testing.py",
+      "path": "tests/test_testing.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_user_error_handler.py",
+      "path": "tests/test_user_error_handler.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_views.py",
+      "path": "tests/test_views.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/typing",
+      "path": "tests/typing",
+      "contents": [
+        {
+          "type": "file",
+          "name": "typing_app_decorators.py",
+          "path": "tests/typing/typing_app_decorators.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "typing_error_handler.py",
+          "path": "tests/typing/typing_error_handler.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "typing_route.py",
+          "path": "tests/typing/typing_route.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/typing/typing_app_decorators.py",
+      "path": "tests/typing/typing_app_decorators.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/typing/typing_error_handler.py",
+      "path": "tests/typing/typing_error_handler.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/typing/typing_route.py",
+      "path": "tests/typing/typing_route.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tox.ini",
+      "path": "tox.ini",
+      "extension": ".ini"
+    }
+  ],
+  "summary": {
+    "file_count": 762,
+    "directory_count": 169,
+    "max_depth": 7,
+    "file_types": {
+      ".json": 5,
+      ".sh": 2,
+      "no_extension": 16,
+      ".md": 19,
+      ".yml": 3,
+      ".yaml": 14,
+      ".rst": 212,
+      ".txt": 44,
+      ".png": 24,
+      ".py": 273,
+      ".bat": 2,
+      ".toml": 13,
+      ".html": 98,
+      ".sql": 8,
+      ".css": 13,
+      ".in": 12,
+      ".typed": 3,
+      ".ini": 1
+    }
+  }
+}

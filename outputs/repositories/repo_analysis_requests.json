@@ -1,0 +1,2621 @@
+{
+  "info": {
+    "name": "requests",
+    "full_name": "psf/requests",
+    "description": "A simple, yet elegant, HTTP library.",
+    "stars": 52086,
+    "forks": 9309,
+    "watchers": 52086,
+    "language": "Python",
+    "created_at": "2011-02-13 18:38:17+00:00",
+    "updated_at": "2024-10-16 12:34:36+00:00",
+    "default_branch": "main",
+    "open_issues": 246,
+    "license": "Apache License 2.0"
+  },
+  "structure": [
+    {
+      "type": "file",
+      "name": ".coveragerc",
+      "path": ".coveragerc",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": ".git-blame-ignore-revs",
+      "path": ".git-blame-ignore-revs",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": ".github",
+      "path": ".github",
+      "contents": [
+        {
+          "type": "file",
+          "name": "CODE_OF_CONDUCT.md",
+          "path": ".github/CODE_OF_CONDUCT.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "CONTRIBUTING.md",
+          "path": ".github/CONTRIBUTING.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "FUNDING.yml",
+          "path": ".github/FUNDING.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "ISSUE_TEMPLATE.md",
+          "path": ".github/ISSUE_TEMPLATE.md",
+          "extension": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "ISSUE_TEMPLATE",
+          "path": ".github/ISSUE_TEMPLATE",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Bug_report.md",
+              "path": ".github/ISSUE_TEMPLATE/Bug_report.md",
+              "extension": ".md"
+            },
+            {
+              "type": "file",
+              "name": "Custom.md",
+              "path": ".github/ISSUE_TEMPLATE/Custom.md",
+              "extension": ".md"
+            },
+            {
+              "type": "file",
+              "name": "Feature_request.md",
+              "path": ".github/ISSUE_TEMPLATE/Feature_request.md",
+              "extension": ".md"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "SECURITY.md",
+          "path": ".github/SECURITY.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "dependabot.yml",
+          "path": ".github/dependabot.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "directory",
+          "name": "workflows",
+          "path": ".github/workflows",
+          "contents": [
+            {
+              "type": "file",
+              "name": "close-issues.yml",
+              "path": ".github/workflows/close-issues.yml",
+              "extension": ".yml"
+            },
+            {
+              "type": "file",
+              "name": "codeql-analysis.yml",
+              "path": ".github/workflows/codeql-analysis.yml",
+              "extension": ".yml"
+            },
+            {
+              "type": "file",
+              "name": "lint.yml",
+              "path": ".github/workflows/lint.yml",
+              "extension": ".yml"
+            },
+            {
+              "type": "file",
+              "name": "lock-issues.yml",
+              "path": ".github/workflows/lock-issues.yml",
+              "extension": ".yml"
+            },
+            {
+              "type": "file",
+              "name": "run-tests.yml",
+              "path": ".github/workflows/run-tests.yml",
+              "extension": ".yml"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".github/CODE_OF_CONDUCT.md",
+      "path": ".github/CODE_OF_CONDUCT.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/CONTRIBUTING.md",
+      "path": ".github/CONTRIBUTING.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/FUNDING.yml",
+      "path": ".github/FUNDING.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE.md",
+      "path": ".github/ISSUE_TEMPLATE.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": ".github/ISSUE_TEMPLATE",
+      "path": ".github/ISSUE_TEMPLATE",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Bug_report.md",
+          "path": ".github/ISSUE_TEMPLATE/Bug_report.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "Custom.md",
+          "path": ".github/ISSUE_TEMPLATE/Custom.md",
+          "extension": ".md"
+        },
+        {
+          "type": "file",
+          "name": "Feature_request.md",
+          "path": ".github/ISSUE_TEMPLATE/Feature_request.md",
+          "extension": ".md"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/Bug_report.md",
+      "path": ".github/ISSUE_TEMPLATE/Bug_report.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/Custom.md",
+      "path": ".github/ISSUE_TEMPLATE/Custom.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/ISSUE_TEMPLATE/Feature_request.md",
+      "path": ".github/ISSUE_TEMPLATE/Feature_request.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/SECURITY.md",
+      "path": ".github/SECURITY.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": ".github/dependabot.yml",
+      "path": ".github/dependabot.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "directory",
+      "name": ".github/workflows",
+      "path": ".github/workflows",
+      "contents": [
+        {
+          "type": "file",
+          "name": "close-issues.yml",
+          "path": ".github/workflows/close-issues.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "codeql-analysis.yml",
+          "path": ".github/workflows/codeql-analysis.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "lint.yml",
+          "path": ".github/workflows/lint.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "lock-issues.yml",
+          "path": ".github/workflows/lock-issues.yml",
+          "extension": ".yml"
+        },
+        {
+          "type": "file",
+          "name": "run-tests.yml",
+          "path": ".github/workflows/run-tests.yml",
+          "extension": ".yml"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/close-issues.yml",
+      "path": ".github/workflows/close-issues.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/codeql-analysis.yml",
+      "path": ".github/workflows/codeql-analysis.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/lint.yml",
+      "path": ".github/workflows/lint.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/lock-issues.yml",
+      "path": ".github/workflows/lock-issues.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".github/workflows/run-tests.yml",
+      "path": ".github/workflows/run-tests.yml",
+      "extension": ".yml"
+    },
+    {
+      "type": "file",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": ".pre-commit-config.yaml",
+      "path": ".pre-commit-config.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": ".readthedocs.yaml",
+      "path": ".readthedocs.yaml",
+      "extension": ".yaml"
+    },
+    {
+      "type": "file",
+      "name": "AUTHORS.rst",
+      "path": "AUTHORS.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "HISTORY.md",
+      "path": "HISTORY.md",
+      "extension": ".md"
+    },
+    {
+      "type": "file",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "MANIFEST.in",
+      "path": "MANIFEST.in",
+      "extension": ".in"
+    },
+    {
+      "type": "file",
+      "name": "Makefile",
+      "path": "Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "NOTICE",
+      "path": "NOTICE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "docs",
+      "path": "docs",
+      "contents": [
+        {
+          "type": "file",
+          "name": ".nojekyll",
+          "path": "docs/.nojekyll",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "docs/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "directory",
+          "name": "_static",
+          "path": "docs/_static",
+          "contents": [
+            {
+              "type": "file",
+              "name": "custom.css",
+              "path": "docs/_static/custom.css",
+              "extension": ".css"
+            },
+            {
+              "type": "file",
+              "name": "requests-sidebar.png",
+              "path": "docs/_static/requests-sidebar.png",
+              "extension": ".png"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "_templates",
+          "path": "docs/_templates",
+          "contents": [
+            {
+              "type": "file",
+              "name": "hacks.html",
+              "path": "docs/_templates/hacks.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "sidebarintro.html",
+              "path": "docs/_templates/sidebarintro.html",
+              "extension": ".html"
+            },
+            {
+              "type": "file",
+              "name": "sidebarlogo.html",
+              "path": "docs/_templates/sidebarlogo.html",
+              "extension": ".html"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "_themes",
+          "path": "docs/_themes",
+          "contents": [
+            {
+              "type": "file",
+              "name": ".gitignore",
+              "path": "docs/_themes/.gitignore",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "LICENSE",
+              "path": "docs/_themes/LICENSE",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "flask_theme_support.py",
+              "path": "docs/_themes/flask_theme_support.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "api.rst",
+          "path": "docs/api.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "directory",
+          "name": "community",
+          "path": "docs/community",
+          "contents": [
+            {
+              "type": "file",
+              "name": "faq.rst",
+              "path": "docs/community/faq.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "out-there.rst",
+              "path": "docs/community/out-there.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "recommended.rst",
+              "path": "docs/community/recommended.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "release-process.rst",
+              "path": "docs/community/release-process.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "support.rst",
+              "path": "docs/community/support.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "updates.rst",
+              "path": "docs/community/updates.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "vulnerabilities.rst",
+              "path": "docs/community/vulnerabilities.rst",
+              "extension": ".rst"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "conf.py",
+          "path": "docs/conf.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "dev",
+          "path": "docs/dev",
+          "contents": [
+            {
+              "type": "file",
+              "name": "authors.rst",
+              "path": "docs/dev/authors.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "contributing.rst",
+              "path": "docs/dev/contributing.rst",
+              "extension": ".rst"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "index.rst",
+          "path": "docs/index.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "make.bat",
+          "path": "docs/make.bat",
+          "extension": ".bat"
+        },
+        {
+          "type": "file",
+          "name": "requirements.txt",
+          "path": "docs/requirements.txt",
+          "extension": ".txt"
+        },
+        {
+          "type": "directory",
+          "name": "user",
+          "path": "docs/user",
+          "contents": [
+            {
+              "type": "file",
+              "name": "advanced.rst",
+              "path": "docs/user/advanced.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "authentication.rst",
+              "path": "docs/user/authentication.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "install.rst",
+              "path": "docs/user/install.rst",
+              "extension": ".rst"
+            },
+            {
+              "type": "file",
+              "name": "quickstart.rst",
+              "path": "docs/user/quickstart.rst",
+              "extension": ".rst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/.nojekyll",
+      "path": "docs/.nojekyll",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "docs/Makefile",
+      "path": "docs/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": "docs/_static",
+      "path": "docs/_static",
+      "contents": [
+        {
+          "type": "file",
+          "name": "custom.css",
+          "path": "docs/_static/custom.css",
+          "extension": ".css"
+        },
+        {
+          "type": "file",
+          "name": "requests-sidebar.png",
+          "path": "docs/_static/requests-sidebar.png",
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/custom.css",
+      "path": "docs/_static/custom.css",
+      "extension": ".css"
+    },
+    {
+      "type": "file",
+      "name": "docs/_static/requests-sidebar.png",
+      "path": "docs/_static/requests-sidebar.png",
+      "extension": ".png"
+    },
+    {
+      "type": "directory",
+      "name": "docs/_templates",
+      "path": "docs/_templates",
+      "contents": [
+        {
+          "type": "file",
+          "name": "hacks.html",
+          "path": "docs/_templates/hacks.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "sidebarintro.html",
+          "path": "docs/_templates/sidebarintro.html",
+          "extension": ".html"
+        },
+        {
+          "type": "file",
+          "name": "sidebarlogo.html",
+          "path": "docs/_templates/sidebarlogo.html",
+          "extension": ".html"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/_templates/hacks.html",
+      "path": "docs/_templates/hacks.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "docs/_templates/sidebarintro.html",
+      "path": "docs/_templates/sidebarintro.html",
+      "extension": ".html"
+    },
+    {
+      "type": "file",
+      "name": "docs/_templates/sidebarlogo.html",
+      "path": "docs/_templates/sidebarlogo.html",
+      "extension": ".html"
+    },
+    {
+      "type": "directory",
+      "name": "docs/_themes",
+      "path": "docs/_themes",
+      "contents": [
+        {
+          "type": "file",
+          "name": ".gitignore",
+          "path": "docs/_themes/.gitignore",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "LICENSE",
+          "path": "docs/_themes/LICENSE",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "flask_theme_support.py",
+          "path": "docs/_themes/flask_theme_support.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/_themes/.gitignore",
+      "path": "docs/_themes/.gitignore",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "docs/_themes/LICENSE",
+      "path": "docs/_themes/LICENSE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "docs/_themes/flask_theme_support.py",
+      "path": "docs/_themes/flask_theme_support.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "docs/api.rst",
+      "path": "docs/api.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "docs/community",
+      "path": "docs/community",
+      "contents": [
+        {
+          "type": "file",
+          "name": "faq.rst",
+          "path": "docs/community/faq.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "out-there.rst",
+          "path": "docs/community/out-there.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "recommended.rst",
+          "path": "docs/community/recommended.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "release-process.rst",
+          "path": "docs/community/release-process.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "support.rst",
+          "path": "docs/community/support.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "updates.rst",
+          "path": "docs/community/updates.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "vulnerabilities.rst",
+          "path": "docs/community/vulnerabilities.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/community/faq.rst",
+      "path": "docs/community/faq.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/out-there.rst",
+      "path": "docs/community/out-there.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/recommended.rst",
+      "path": "docs/community/recommended.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/release-process.rst",
+      "path": "docs/community/release-process.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/support.rst",
+      "path": "docs/community/support.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/updates.rst",
+      "path": "docs/community/updates.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/community/vulnerabilities.rst",
+      "path": "docs/community/vulnerabilities.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/conf.py",
+      "path": "docs/conf.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "docs/dev",
+      "path": "docs/dev",
+      "contents": [
+        {
+          "type": "file",
+          "name": "authors.rst",
+          "path": "docs/dev/authors.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "contributing.rst",
+          "path": "docs/dev/contributing.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/dev/authors.rst",
+      "path": "docs/dev/authors.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/dev/contributing.rst",
+      "path": "docs/dev/contributing.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/index.rst",
+      "path": "docs/index.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/make.bat",
+      "path": "docs/make.bat",
+      "extension": ".bat"
+    },
+    {
+      "type": "file",
+      "name": "docs/requirements.txt",
+      "path": "docs/requirements.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "directory",
+      "name": "docs/user",
+      "path": "docs/user",
+      "contents": [
+        {
+          "type": "file",
+          "name": "advanced.rst",
+          "path": "docs/user/advanced.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "authentication.rst",
+          "path": "docs/user/authentication.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "install.rst",
+          "path": "docs/user/install.rst",
+          "extension": ".rst"
+        },
+        {
+          "type": "file",
+          "name": "quickstart.rst",
+          "path": "docs/user/quickstart.rst",
+          "extension": ".rst"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "docs/user/advanced.rst",
+      "path": "docs/user/advanced.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/user/authentication.rst",
+      "path": "docs/user/authentication.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/user/install.rst",
+      "path": "docs/user/install.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "file",
+      "name": "docs/user/quickstart.rst",
+      "path": "docs/user/quickstart.rst",
+      "extension": ".rst"
+    },
+    {
+      "type": "directory",
+      "name": "ext",
+      "path": "ext",
+      "contents": [
+        {
+          "type": "file",
+          "name": "LICENSE",
+          "path": "ext/LICENSE",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "flower-of-life.jpg",
+          "path": "ext/flower-of-life.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "type": "file",
+          "name": "kr-compressed.png",
+          "path": "ext/kr-compressed.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "kr.png",
+          "path": "ext/kr.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "psf-compressed.png",
+          "path": "ext/psf-compressed.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "psf.png",
+          "path": "ext/psf.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "requests-logo-compressed.png",
+          "path": "ext/requests-logo-compressed.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "requests-logo.ai",
+          "path": "ext/requests-logo.ai",
+          "extension": ".ai"
+        },
+        {
+          "type": "file",
+          "name": "requests-logo.png",
+          "path": "ext/requests-logo.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "requests-logo.svg",
+          "path": "ext/requests-logo.svg",
+          "extension": ".svg"
+        },
+        {
+          "type": "file",
+          "name": "ss-compressed.png",
+          "path": "ext/ss-compressed.png",
+          "extension": ".png"
+        },
+        {
+          "type": "file",
+          "name": "ss.png",
+          "path": "ext/ss.png",
+          "extension": ".png"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "ext/LICENSE",
+      "path": "ext/LICENSE",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "ext/flower-of-life.jpg",
+      "path": "ext/flower-of-life.jpg",
+      "extension": ".jpg"
+    },
+    {
+      "type": "file",
+      "name": "ext/kr-compressed.png",
+      "path": "ext/kr-compressed.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/kr.png",
+      "path": "ext/kr.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/psf-compressed.png",
+      "path": "ext/psf-compressed.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/psf.png",
+      "path": "ext/psf.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/requests-logo-compressed.png",
+      "path": "ext/requests-logo-compressed.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/requests-logo.ai",
+      "path": "ext/requests-logo.ai",
+      "extension": ".ai"
+    },
+    {
+      "type": "file",
+      "name": "ext/requests-logo.png",
+      "path": "ext/requests-logo.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/requests-logo.svg",
+      "path": "ext/requests-logo.svg",
+      "extension": ".svg"
+    },
+    {
+      "type": "file",
+      "name": "ext/ss-compressed.png",
+      "path": "ext/ss-compressed.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "ext/ss.png",
+      "path": "ext/ss.png",
+      "extension": ".png"
+    },
+    {
+      "type": "file",
+      "name": "pyproject.toml",
+      "path": "pyproject.toml",
+      "extension": ".toml"
+    },
+    {
+      "type": "file",
+      "name": "requirements-dev.txt",
+      "path": "requirements-dev.txt",
+      "extension": ".txt"
+    },
+    {
+      "type": "file",
+      "name": "setup.cfg",
+      "path": "setup.cfg",
+      "extension": ".cfg"
+    },
+    {
+      "type": "file",
+      "name": "setup.py",
+      "path": "setup.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "src",
+      "path": "src",
+      "contents": [
+        {
+          "type": "directory",
+          "name": "requests",
+          "path": "src/requests",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "src/requests/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "__version__.py",
+              "path": "src/requests/__version__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "_internal_utils.py",
+              "path": "src/requests/_internal_utils.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "adapters.py",
+              "path": "src/requests/adapters.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "api.py",
+              "path": "src/requests/api.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "auth.py",
+              "path": "src/requests/auth.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "certs.py",
+              "path": "src/requests/certs.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "compat.py",
+              "path": "src/requests/compat.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "cookies.py",
+              "path": "src/requests/cookies.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "exceptions.py",
+              "path": "src/requests/exceptions.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "help.py",
+              "path": "src/requests/help.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "hooks.py",
+              "path": "src/requests/hooks.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "models.py",
+              "path": "src/requests/models.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "packages.py",
+              "path": "src/requests/packages.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "sessions.py",
+              "path": "src/requests/sessions.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "status_codes.py",
+              "path": "src/requests/status_codes.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "structures.py",
+              "path": "src/requests/structures.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "utils.py",
+              "path": "src/requests/utils.py",
+              "extension": ".py"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "src/requests",
+      "path": "src/requests",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "src/requests/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "__version__.py",
+          "path": "src/requests/__version__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "_internal_utils.py",
+          "path": "src/requests/_internal_utils.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "adapters.py",
+          "path": "src/requests/adapters.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "api.py",
+          "path": "src/requests/api.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "auth.py",
+          "path": "src/requests/auth.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "certs.py",
+          "path": "src/requests/certs.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "compat.py",
+          "path": "src/requests/compat.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "cookies.py",
+          "path": "src/requests/cookies.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "exceptions.py",
+          "path": "src/requests/exceptions.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "help.py",
+          "path": "src/requests/help.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "hooks.py",
+          "path": "src/requests/hooks.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "models.py",
+          "path": "src/requests/models.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "packages.py",
+          "path": "src/requests/packages.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "sessions.py",
+          "path": "src/requests/sessions.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "status_codes.py",
+          "path": "src/requests/status_codes.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "structures.py",
+          "path": "src/requests/structures.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "utils.py",
+          "path": "src/requests/utils.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "src/requests/__init__.py",
+      "path": "src/requests/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/__version__.py",
+      "path": "src/requests/__version__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/_internal_utils.py",
+      "path": "src/requests/_internal_utils.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/adapters.py",
+      "path": "src/requests/adapters.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/api.py",
+      "path": "src/requests/api.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/auth.py",
+      "path": "src/requests/auth.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/certs.py",
+      "path": "src/requests/certs.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/compat.py",
+      "path": "src/requests/compat.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/cookies.py",
+      "path": "src/requests/cookies.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/exceptions.py",
+      "path": "src/requests/exceptions.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/help.py",
+      "path": "src/requests/help.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/hooks.py",
+      "path": "src/requests/hooks.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/models.py",
+      "path": "src/requests/models.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/packages.py",
+      "path": "src/requests/packages.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/sessions.py",
+      "path": "src/requests/sessions.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/status_codes.py",
+      "path": "src/requests/status_codes.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/structures.py",
+      "path": "src/requests/structures.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "src/requests/utils.py",
+      "path": "src/requests/utils.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests",
+      "path": "tests",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "certs",
+          "path": "tests/certs",
+          "contents": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "path": "tests/certs/README.md",
+              "extension": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "expired",
+              "path": "tests/certs/expired",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/expired/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "tests/certs/expired/README.md",
+                  "extension": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "ca",
+                  "path": "tests/certs/expired/ca",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "Makefile",
+                      "path": "tests/certs/expired/ca/Makefile",
+                      "extension": "no_extension"
+                    },
+                    {
+                      "type": "file",
+                      "name": "ca-private.key",
+                      "path": "tests/certs/expired/ca/ca-private.key",
+                      "extension": ".key"
+                    },
+                    {
+                      "type": "file",
+                      "name": "ca.cnf",
+                      "path": "tests/certs/expired/ca/ca.cnf",
+                      "extension": ".cnf"
+                    },
+                    {
+                      "type": "file",
+                      "name": "ca.crt",
+                      "path": "tests/certs/expired/ca/ca.crt",
+                      "extension": ".crt"
+                    },
+                    {
+                      "type": "file",
+                      "name": "ca.srl",
+                      "path": "tests/certs/expired/ca/ca.srl",
+                      "extension": ".srl"
+                    }
+                  ]
+                },
+                {
+                  "type": "directory",
+                  "name": "server",
+                  "path": "tests/certs/expired/server",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "Makefile",
+                      "path": "tests/certs/expired/server/Makefile",
+                      "extension": "no_extension"
+                    },
+                    {
+                      "type": "file",
+                      "name": "cert.cnf",
+                      "path": "tests/certs/expired/server/cert.cnf",
+                      "extension": ".cnf"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.csr",
+                      "path": "tests/certs/expired/server/server.csr",
+                      "extension": ".csr"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.key",
+                      "path": "tests/certs/expired/server/server.key",
+                      "extension": ".key"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.pem",
+                      "path": "tests/certs/expired/server/server.pem",
+                      "extension": ".pem"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "mtls",
+              "path": "tests/certs/mtls",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/mtls/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "tests/certs/mtls/README.md",
+                  "extension": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "client",
+                  "path": "tests/certs/mtls/client",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "Makefile",
+                      "path": "tests/certs/mtls/client/Makefile",
+                      "extension": "no_extension"
+                    },
+                    {
+                      "type": "file",
+                      "name": "ca",
+                      "path": "tests/certs/mtls/client/ca",
+                      "extension": "no_extension"
+                    },
+                    {
+                      "type": "file",
+                      "name": "cert.cnf",
+                      "path": "tests/certs/mtls/client/cert.cnf",
+                      "extension": ".cnf"
+                    },
+                    {
+                      "type": "file",
+                      "name": "client.csr",
+                      "path": "tests/certs/mtls/client/client.csr",
+                      "extension": ".csr"
+                    },
+                    {
+                      "type": "file",
+                      "name": "client.key",
+                      "path": "tests/certs/mtls/client/client.key",
+                      "extension": ".key"
+                    },
+                    {
+                      "type": "file",
+                      "name": "client.pem",
+                      "path": "tests/certs/mtls/client/client.pem",
+                      "extension": ".pem"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "valid",
+              "path": "tests/certs/valid",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "ca",
+                  "path": "tests/certs/valid/ca",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "directory",
+                  "name": "server",
+                  "path": "tests/certs/valid/server",
+                  "contents": [
+                    {
+                      "type": "file",
+                      "name": "Makefile",
+                      "path": "tests/certs/valid/server/Makefile",
+                      "extension": "no_extension"
+                    },
+                    {
+                      "type": "file",
+                      "name": "cert.cnf",
+                      "path": "tests/certs/valid/server/cert.cnf",
+                      "extension": ".cnf"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.csr",
+                      "path": "tests/certs/valid/server/server.csr",
+                      "extension": ".csr"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.key",
+                      "path": "tests/certs/valid/server/server.key",
+                      "extension": ".key"
+                    },
+                    {
+                      "type": "file",
+                      "name": "server.pem",
+                      "path": "tests/certs/valid/server/server.pem",
+                      "extension": ".pem"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "compat.py",
+          "path": "tests/compat.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "conftest.py",
+          "path": "tests/conftest.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_adapters.py",
+          "path": "tests/test_adapters.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_help.py",
+          "path": "tests/test_help.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_hooks.py",
+          "path": "tests/test_hooks.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_lowlevel.py",
+          "path": "tests/test_lowlevel.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_packages.py",
+          "path": "tests/test_packages.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_requests.py",
+          "path": "tests/test_requests.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_structures.py",
+          "path": "tests/test_structures.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_testserver.py",
+          "path": "tests/test_testserver.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "test_utils.py",
+          "path": "tests/test_utils.py",
+          "extension": ".py"
+        },
+        {
+          "type": "directory",
+          "name": "testserver",
+          "path": "tests/testserver",
+          "contents": [
+            {
+              "type": "file",
+              "name": "__init__.py",
+              "path": "tests/testserver/__init__.py",
+              "extension": ".py"
+            },
+            {
+              "type": "file",
+              "name": "server.py",
+              "path": "tests/testserver/server.py",
+              "extension": ".py"
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "name": "utils.py",
+          "path": "tests/utils.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/__init__.py",
+      "path": "tests/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs",
+      "path": "tests/certs",
+      "contents": [
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "tests/certs/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "expired",
+          "path": "tests/certs/expired",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/expired/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "README.md",
+              "path": "tests/certs/expired/README.md",
+              "extension": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "ca",
+              "path": "tests/certs/expired/ca",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/expired/ca/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "ca-private.key",
+                  "path": "tests/certs/expired/ca/ca-private.key",
+                  "extension": ".key"
+                },
+                {
+                  "type": "file",
+                  "name": "ca.cnf",
+                  "path": "tests/certs/expired/ca/ca.cnf",
+                  "extension": ".cnf"
+                },
+                {
+                  "type": "file",
+                  "name": "ca.crt",
+                  "path": "tests/certs/expired/ca/ca.crt",
+                  "extension": ".crt"
+                },
+                {
+                  "type": "file",
+                  "name": "ca.srl",
+                  "path": "tests/certs/expired/ca/ca.srl",
+                  "extension": ".srl"
+                }
+              ]
+            },
+            {
+              "type": "directory",
+              "name": "server",
+              "path": "tests/certs/expired/server",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/expired/server/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "cert.cnf",
+                  "path": "tests/certs/expired/server/cert.cnf",
+                  "extension": ".cnf"
+                },
+                {
+                  "type": "file",
+                  "name": "server.csr",
+                  "path": "tests/certs/expired/server/server.csr",
+                  "extension": ".csr"
+                },
+                {
+                  "type": "file",
+                  "name": "server.key",
+                  "path": "tests/certs/expired/server/server.key",
+                  "extension": ".key"
+                },
+                {
+                  "type": "file",
+                  "name": "server.pem",
+                  "path": "tests/certs/expired/server/server.pem",
+                  "extension": ".pem"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "mtls",
+          "path": "tests/certs/mtls",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/mtls/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "README.md",
+              "path": "tests/certs/mtls/README.md",
+              "extension": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "client",
+              "path": "tests/certs/mtls/client",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/mtls/client/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "ca",
+                  "path": "tests/certs/mtls/client/ca",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "cert.cnf",
+                  "path": "tests/certs/mtls/client/cert.cnf",
+                  "extension": ".cnf"
+                },
+                {
+                  "type": "file",
+                  "name": "client.csr",
+                  "path": "tests/certs/mtls/client/client.csr",
+                  "extension": ".csr"
+                },
+                {
+                  "type": "file",
+                  "name": "client.key",
+                  "path": "tests/certs/mtls/client/client.key",
+                  "extension": ".key"
+                },
+                {
+                  "type": "file",
+                  "name": "client.pem",
+                  "path": "tests/certs/mtls/client/client.pem",
+                  "extension": ".pem"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "valid",
+          "path": "tests/certs/valid",
+          "contents": [
+            {
+              "type": "file",
+              "name": "ca",
+              "path": "tests/certs/valid/ca",
+              "extension": "no_extension"
+            },
+            {
+              "type": "directory",
+              "name": "server",
+              "path": "tests/certs/valid/server",
+              "contents": [
+                {
+                  "type": "file",
+                  "name": "Makefile",
+                  "path": "tests/certs/valid/server/Makefile",
+                  "extension": "no_extension"
+                },
+                {
+                  "type": "file",
+                  "name": "cert.cnf",
+                  "path": "tests/certs/valid/server/cert.cnf",
+                  "extension": ".cnf"
+                },
+                {
+                  "type": "file",
+                  "name": "server.csr",
+                  "path": "tests/certs/valid/server/server.csr",
+                  "extension": ".csr"
+                },
+                {
+                  "type": "file",
+                  "name": "server.key",
+                  "path": "tests/certs/valid/server/server.key",
+                  "extension": ".key"
+                },
+                {
+                  "type": "file",
+                  "name": "server.pem",
+                  "path": "tests/certs/valid/server/server.pem",
+                  "extension": ".pem"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/README.md",
+      "path": "tests/certs/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/expired",
+      "path": "tests/certs/expired",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/expired/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "tests/certs/expired/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "ca",
+          "path": "tests/certs/expired/ca",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/expired/ca/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "ca-private.key",
+              "path": "tests/certs/expired/ca/ca-private.key",
+              "extension": ".key"
+            },
+            {
+              "type": "file",
+              "name": "ca.cnf",
+              "path": "tests/certs/expired/ca/ca.cnf",
+              "extension": ".cnf"
+            },
+            {
+              "type": "file",
+              "name": "ca.crt",
+              "path": "tests/certs/expired/ca/ca.crt",
+              "extension": ".crt"
+            },
+            {
+              "type": "file",
+              "name": "ca.srl",
+              "path": "tests/certs/expired/ca/ca.srl",
+              "extension": ".srl"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "server",
+          "path": "tests/certs/expired/server",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/expired/server/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "cert.cnf",
+              "path": "tests/certs/expired/server/cert.cnf",
+              "extension": ".cnf"
+            },
+            {
+              "type": "file",
+              "name": "server.csr",
+              "path": "tests/certs/expired/server/server.csr",
+              "extension": ".csr"
+            },
+            {
+              "type": "file",
+              "name": "server.key",
+              "path": "tests/certs/expired/server/server.key",
+              "extension": ".key"
+            },
+            {
+              "type": "file",
+              "name": "server.pem",
+              "path": "tests/certs/expired/server/server.pem",
+              "extension": ".pem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/Makefile",
+      "path": "tests/certs/expired/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/README.md",
+      "path": "tests/certs/expired/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/expired/ca",
+      "path": "tests/certs/expired/ca",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/expired/ca/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "ca-private.key",
+          "path": "tests/certs/expired/ca/ca-private.key",
+          "extension": ".key"
+        },
+        {
+          "type": "file",
+          "name": "ca.cnf",
+          "path": "tests/certs/expired/ca/ca.cnf",
+          "extension": ".cnf"
+        },
+        {
+          "type": "file",
+          "name": "ca.crt",
+          "path": "tests/certs/expired/ca/ca.crt",
+          "extension": ".crt"
+        },
+        {
+          "type": "file",
+          "name": "ca.srl",
+          "path": "tests/certs/expired/ca/ca.srl",
+          "extension": ".srl"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/ca/Makefile",
+      "path": "tests/certs/expired/ca/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/ca/ca-private.key",
+      "path": "tests/certs/expired/ca/ca-private.key",
+      "extension": ".key"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/ca/ca.cnf",
+      "path": "tests/certs/expired/ca/ca.cnf",
+      "extension": ".cnf"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/ca/ca.crt",
+      "path": "tests/certs/expired/ca/ca.crt",
+      "extension": ".crt"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/ca/ca.srl",
+      "path": "tests/certs/expired/ca/ca.srl",
+      "extension": ".srl"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/expired/server",
+      "path": "tests/certs/expired/server",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/expired/server/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "cert.cnf",
+          "path": "tests/certs/expired/server/cert.cnf",
+          "extension": ".cnf"
+        },
+        {
+          "type": "file",
+          "name": "server.csr",
+          "path": "tests/certs/expired/server/server.csr",
+          "extension": ".csr"
+        },
+        {
+          "type": "file",
+          "name": "server.key",
+          "path": "tests/certs/expired/server/server.key",
+          "extension": ".key"
+        },
+        {
+          "type": "file",
+          "name": "server.pem",
+          "path": "tests/certs/expired/server/server.pem",
+          "extension": ".pem"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/server/Makefile",
+      "path": "tests/certs/expired/server/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/server/cert.cnf",
+      "path": "tests/certs/expired/server/cert.cnf",
+      "extension": ".cnf"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/server/server.csr",
+      "path": "tests/certs/expired/server/server.csr",
+      "extension": ".csr"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/server/server.key",
+      "path": "tests/certs/expired/server/server.key",
+      "extension": ".key"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/expired/server/server.pem",
+      "path": "tests/certs/expired/server/server.pem",
+      "extension": ".pem"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/mtls",
+      "path": "tests/certs/mtls",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/mtls/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "README.md",
+          "path": "tests/certs/mtls/README.md",
+          "extension": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "client",
+          "path": "tests/certs/mtls/client",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/mtls/client/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "ca",
+              "path": "tests/certs/mtls/client/ca",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "cert.cnf",
+              "path": "tests/certs/mtls/client/cert.cnf",
+              "extension": ".cnf"
+            },
+            {
+              "type": "file",
+              "name": "client.csr",
+              "path": "tests/certs/mtls/client/client.csr",
+              "extension": ".csr"
+            },
+            {
+              "type": "file",
+              "name": "client.key",
+              "path": "tests/certs/mtls/client/client.key",
+              "extension": ".key"
+            },
+            {
+              "type": "file",
+              "name": "client.pem",
+              "path": "tests/certs/mtls/client/client.pem",
+              "extension": ".pem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/Makefile",
+      "path": "tests/certs/mtls/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/README.md",
+      "path": "tests/certs/mtls/README.md",
+      "extension": ".md"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/mtls/client",
+      "path": "tests/certs/mtls/client",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/mtls/client/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "ca",
+          "path": "tests/certs/mtls/client/ca",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "cert.cnf",
+          "path": "tests/certs/mtls/client/cert.cnf",
+          "extension": ".cnf"
+        },
+        {
+          "type": "file",
+          "name": "client.csr",
+          "path": "tests/certs/mtls/client/client.csr",
+          "extension": ".csr"
+        },
+        {
+          "type": "file",
+          "name": "client.key",
+          "path": "tests/certs/mtls/client/client.key",
+          "extension": ".key"
+        },
+        {
+          "type": "file",
+          "name": "client.pem",
+          "path": "tests/certs/mtls/client/client.pem",
+          "extension": ".pem"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/Makefile",
+      "path": "tests/certs/mtls/client/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/ca",
+      "path": "tests/certs/mtls/client/ca",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/cert.cnf",
+      "path": "tests/certs/mtls/client/cert.cnf",
+      "extension": ".cnf"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/client.csr",
+      "path": "tests/certs/mtls/client/client.csr",
+      "extension": ".csr"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/client.key",
+      "path": "tests/certs/mtls/client/client.key",
+      "extension": ".key"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/mtls/client/client.pem",
+      "path": "tests/certs/mtls/client/client.pem",
+      "extension": ".pem"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/valid",
+      "path": "tests/certs/valid",
+      "contents": [
+        {
+          "type": "file",
+          "name": "ca",
+          "path": "tests/certs/valid/ca",
+          "extension": "no_extension"
+        },
+        {
+          "type": "directory",
+          "name": "server",
+          "path": "tests/certs/valid/server",
+          "contents": [
+            {
+              "type": "file",
+              "name": "Makefile",
+              "path": "tests/certs/valid/server/Makefile",
+              "extension": "no_extension"
+            },
+            {
+              "type": "file",
+              "name": "cert.cnf",
+              "path": "tests/certs/valid/server/cert.cnf",
+              "extension": ".cnf"
+            },
+            {
+              "type": "file",
+              "name": "server.csr",
+              "path": "tests/certs/valid/server/server.csr",
+              "extension": ".csr"
+            },
+            {
+              "type": "file",
+              "name": "server.key",
+              "path": "tests/certs/valid/server/server.key",
+              "extension": ".key"
+            },
+            {
+              "type": "file",
+              "name": "server.pem",
+              "path": "tests/certs/valid/server/server.pem",
+              "extension": ".pem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/ca",
+      "path": "tests/certs/valid/ca",
+      "extension": "no_extension"
+    },
+    {
+      "type": "directory",
+      "name": "tests/certs/valid/server",
+      "path": "tests/certs/valid/server",
+      "contents": [
+        {
+          "type": "file",
+          "name": "Makefile",
+          "path": "tests/certs/valid/server/Makefile",
+          "extension": "no_extension"
+        },
+        {
+          "type": "file",
+          "name": "cert.cnf",
+          "path": "tests/certs/valid/server/cert.cnf",
+          "extension": ".cnf"
+        },
+        {
+          "type": "file",
+          "name": "server.csr",
+          "path": "tests/certs/valid/server/server.csr",
+          "extension": ".csr"
+        },
+        {
+          "type": "file",
+          "name": "server.key",
+          "path": "tests/certs/valid/server/server.key",
+          "extension": ".key"
+        },
+        {
+          "type": "file",
+          "name": "server.pem",
+          "path": "tests/certs/valid/server/server.pem",
+          "extension": ".pem"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/server/Makefile",
+      "path": "tests/certs/valid/server/Makefile",
+      "extension": "no_extension"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/server/cert.cnf",
+      "path": "tests/certs/valid/server/cert.cnf",
+      "extension": ".cnf"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/server/server.csr",
+      "path": "tests/certs/valid/server/server.csr",
+      "extension": ".csr"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/server/server.key",
+      "path": "tests/certs/valid/server/server.key",
+      "extension": ".key"
+    },
+    {
+      "type": "file",
+      "name": "tests/certs/valid/server/server.pem",
+      "path": "tests/certs/valid/server/server.pem",
+      "extension": ".pem"
+    },
+    {
+      "type": "file",
+      "name": "tests/compat.py",
+      "path": "tests/compat.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/conftest.py",
+      "path": "tests/conftest.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_adapters.py",
+      "path": "tests/test_adapters.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_help.py",
+      "path": "tests/test_help.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_hooks.py",
+      "path": "tests/test_hooks.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_lowlevel.py",
+      "path": "tests/test_lowlevel.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_packages.py",
+      "path": "tests/test_packages.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_requests.py",
+      "path": "tests/test_requests.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_structures.py",
+      "path": "tests/test_structures.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_testserver.py",
+      "path": "tests/test_testserver.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/test_utils.py",
+      "path": "tests/test_utils.py",
+      "extension": ".py"
+    },
+    {
+      "type": "directory",
+      "name": "tests/testserver",
+      "path": "tests/testserver",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "path": "tests/testserver/__init__.py",
+          "extension": ".py"
+        },
+        {
+          "type": "file",
+          "name": "server.py",
+          "path": "tests/testserver/server.py",
+          "extension": ".py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "tests/testserver/__init__.py",
+      "path": "tests/testserver/__init__.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/testserver/server.py",
+      "path": "tests/testserver/server.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tests/utils.py",
+      "path": "tests/utils.py",
+      "extension": ".py"
+    },
+    {
+      "type": "file",
+      "name": "tox.ini",
+      "path": "tox.ini",
+      "extension": ".ini"
+    }
+  ],
+  "summary": {
+    "file_count": 368,
+    "directory_count": 52,
+    "max_depth": 4,
+    "file_types": {
+      "no_extension": 55,
+      ".md": 30,
+      ".yml": 19,
+      ".yaml": 2,
+      ".rst": 44,
+      ".in": 1,
+      ".css": 3,
+      ".png": 19,
+      ".html": 9,
+      ".py": 92,
+      ".bat": 2,
+      ".txt": 3,
+      ".jpg": 2,
+      ".ai": 2,
+      ".svg": 2,
+      ".toml": 1,
+      ".cfg": 1,
+      ".key": 20,
+      ".cnf": 20,
+      ".crt": 5,
+      ".srl": 5,
+      ".csr": 15,
+      ".pem": 15,
+      ".ini": 1
+    }
+  }
+}

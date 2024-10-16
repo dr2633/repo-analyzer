@@ -1,8 +1,6 @@
-# python src/repo_analyzer/batch_analyzer.py
-
 import os
 import csv  # or json
-from src.repo_analyzer.analyzer import analyze_repository, print_analysis
+from .analyzer import analyze_repository, print_analysis
 import json
 
 def read_repository_list(file_path):
@@ -17,7 +15,7 @@ def read_repository_list(file_path):
     return repositories
 
 def main():
-    input_file = '/repository-urls/repositories.csv'  # Updated file path
+    input_file = 'repository-urls/repositories.csv'  # Relative file path
     output_dir = 'outputs/repositories'  # Custom folder for saving JSON files
 
     os.makedirs(output_dir, exist_ok=True)
@@ -25,9 +23,11 @@ def main():
 
     for repo_url in repositories:
         try:
+            # Analyze the repository
             analysis_result = analyze_repository(repo_url)
             print_analysis(analysis_result)
 
+            # Extract repository name for the filename
             repo_name = analysis_result['info']['name']
             json_filename = f"repo_analysis_{repo_name}.json"
             json_filepath = os.path.join(output_dir, json_filename)
