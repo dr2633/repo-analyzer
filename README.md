@@ -1,8 +1,10 @@
-# GitHub Repository Analyzer
+# ![GitHub Logo](resources/github.png) GitHub Repository Analyzer
 
 ## Overview
 
-The **GitHub Repository Analyzer** is a tool designed to extract, analyze, and evaluate the structure of GitHub repositories. It provides a JSON representation of a repository’s structure and enables users to compare it against best practices or a defined "gold standard" structure. This repository aims to improve the consistency, maintainability, and scalability of codebases by offering insights into the layout and organization of project files.
+The GitHub Repository Analyzer is a tool designed to extract and evaluate the structure of GitHub repositories. It generates a JSON representation of each repository’s structure and allows users to compare the structure against established best practices. This helps improve the consistency, maintainability, and scalability of codebases by providing insights into the layout and organization of project files.
+
+The project also includes a batch analysis script that processes a list of GitHub URLs (from a CSV file) and outputs individual JSON files for each repository. This feature simplifies the analysis of multiple repositories at once.
 
 ---
 
@@ -40,14 +42,20 @@ python check_token.py
 ```
 
 ### 5. Run the Analyzer:
-After setting up the token, you can run the GitHub Repository Analyzer with the following command:
+
+After setting up the token, you can run the GitHub Repository Batch Analyzer to process multiple repositories from a CSV file with the following command:
 
 ```bash
-python src/repo_analyzer/analyzer.py <REPOSITORY_URL>
+python src/repo_analyzer/batch_analyzer.py
+
 ```
 
-This will output the repository structure in JSON format and store the results for evaluation.
+This will:
 
+Read the repository URLs from repository-urls/repositories.csv (make sure your CSV file is in the correct directory).
+Analyze each repository.
+Output the repository structure in individual JSON files, saved in the outputs/repositories/ directory.
+Each repository's structure will be stored in a separate JSON file for easy evaluation and further analysis.
 ---
 
 ## Features
@@ -72,9 +80,6 @@ This will:
 - Retrieve the structure of the repository.
 - Generate a JSON file representing the structure.
 - Optionally, generate a natural language explanation of the structure.
-
-### Mapping to a Gold Standard:
-You can modify the repository's structure to match a "best practices" layout by configuring the mapping rules in the analyzer. This allows you to refactor repositories automatically.
 
 ---
 
