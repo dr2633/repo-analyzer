@@ -1,7 +1,7 @@
 # <img src="resources/github.png" alt="GitHub Logo" width="100"/> 
 # GitHub Repository Analyzer
 
-## Overview
+### Overview
 
 The GitHub Repository Analyzer is a tool designed to extract and evaluate the structure of GitHub repositories. It generates a JSON representation of each repository’s structure and allows users to compare the structure against established best practices. This helps improve the consistency, maintainability, and scalability of codebases by providing insights into the layout and organization of project files.
 
@@ -9,17 +9,17 @@ The project also includes a batch analysis script that processes a list of GitHu
 
 ---
 
-## Instructions for Accessing and Using a GitHub Token
+### Instructions for Accessing a GitHub Token
 
 In order to interact with GitHub’s API, you'll need to generate and use a personal access token (PAT). Follow these steps to set it up:
 
-### 1. Generate a GitHub Token:
+#### 1. Generate a GitHub Token:
 - Go to [GitHub's Personal Access Tokens Page](https://github.com/settings/tokens).
 - Click on **Generate new token**, provide a name and expiration date.
 - Under **Scopes**, select `repo` (this allows access to repository contents).
 - Generate and copy the token.
 
-### 2. Set Your Token as an Environment Variable:
+#### 2. Set Your Token as an Environment Variable:
 Open your terminal or command prompt and export the token as an environment variable:
 
 ```bash
@@ -28,21 +28,21 @@ export GITHUB_TOKEN='<YOUR_GITHUB_TOKEN>'
 
 Replace `<YOUR_GITHUB_TOKEN>` with your actual token.
 
-### 3. Verify Your Token:
+#### 3. Verify Your Token:
 You can check if the token has been correctly set using:
 
 ```bash
 echo $GITHUB_TOKEN
 ```
 
-### 4. Test Your Token:
+#### 4. Test Your Token:
 Run the `check_token.py` script to verify that the token is working:
 
 ```bash
 python check_token.py
 ```
 
-### 5. Run the Analyzer:
+#### 5. Run the Analyzer:
 
 After setting up the token, you can run the GitHub Repository Batch Analyzer to process multiple repositories from a CSV file with the following command:
 
@@ -60,7 +60,7 @@ This will:
 
 ---
 
-## Features
+### Features
 
 - **Extract Repository Structure**: Fetch the repository’s directory and file structure from GitHub and generate a JSON representation.
 - **Evaluate Against Best Practices**: Compare the current structure against a "gold standard" or best practices structure to identify areas for improvement.
@@ -69,9 +69,9 @@ This will:
 
 ---
 
-## Example Usage
+### Example Usage
 
-### Analyzing a Repository:
+#### Analyzing a Repository:
 To analyze the structure of a GitHub repository, run the following command:
 
 ```bash
@@ -85,15 +85,15 @@ This will:
 
 ---
 
-## Motivation for Evaluating Repository Structure
+### Motivation for Evaluating Repository Structure
 
-### Why is Repository Structure Important?
+#### Why is Repository Structure Important?
 A well-structured repository:
 - **Improves collaboration**: Clear separation of concerns and organization helps developers understand where to find things, reducing time spent on onboarding and project navigation.
 - **Enhances maintainability**: Consistent directory layouts and clear documentation make long-term maintenance easier, especially as projects scale.
 - **Facilitates automation**: Standardized layouts enable smoother integrations with continuous integration and deployment pipelines, ensuring that the right files are in the right places for builds, tests, and deployments.
 
-### Developing an Evaluation Framework:
+#### Developing an Evaluation Framework:
 The GitHub Repository Analyzer allows for a systematic evaluation of repository structures by:
 - Extracting file and directory organization.
 - Comparing the structure with best practices (e.g., ensuring files are located in `src/`, `tests/`, etc.).
@@ -102,7 +102,7 @@ The GitHub Repository Analyzer allows for a systematic evaluation of repository 
 
 ---
 
-## Contributing
+### Contributing
 
 If you'd like to contribute to this project:
 1. Fork the repository.
@@ -113,7 +113,7 @@ Contributions that improve the analyzer, add additional evaluation metrics, or e
 
 ---
 
-## License
+### License
 
 This project is licensed under the **Apache License 2.0**.
 
