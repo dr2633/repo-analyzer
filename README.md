@@ -1,4 +1,5 @@
-# <img src="resources/github.png" alt="GitHub Logo" width="100"/> GitHub Repository Analyzer
+# <img src="resources/github.png" alt="GitHub Logo" width="100"/> 
+## GitHub Repository Analyzer
 
 ## Overview
 
@@ -52,10 +53,11 @@ python src/repo_analyzer/batch_analyzer.py
 
 This will:
 
-Read the repository URLs from repository-urls/repositories.csv (make sure your CSV file is in the correct directory).
-Analyze each repository.
-Output the repository structure in individual JSON files, saved in the outputs/repositories/ directory.
-Each repository's structure will be stored in a separate JSON file for easy evaluation and further analysis.
+- Read the repository URLs from repository-urls/repositories.csv (make sure your CSV file is in the correct directory).
+- Analyze each repository.
+- Output the repository structure in individual JSON files, saved in the outputs/repositories/ directory.
+- Each repository's structure will be stored in a separate JSON file for easy evaluation and further analysis.
+
 ---
 
 ## Features
