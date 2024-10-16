@@ -1,5 +1,5 @@
 # <img src="resources/github.png" alt="GitHub Logo" width="100"/> 
-## GitHub Repository Analyzer
+# GitHub Repository Analyzer
 
 ## Overview
 
