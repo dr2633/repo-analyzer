@@ -1,4 +1,4 @@
-# ![GitHub Logo](resources/github.png) GitHub Repository Analyzer
+# <img src="resources/github.png" alt="GitHub Logo" width="100"/> GitHub Repository Analyzer
 
 ## Overview
 
