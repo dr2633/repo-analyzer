@@ -107,7 +107,7 @@ If you'd like to contribute to this project:
 2. Make your changes.
 3. Submit a pull request.
 
-We welcome contributions that improve the analyzer, add additional evaluation metrics, or extend its functionality to other types of repositories.
+Contributions that improve the analyzer, add additional evaluation metrics, or extend its functionality to other types of repositories are welcome! 
 
 ---
 
